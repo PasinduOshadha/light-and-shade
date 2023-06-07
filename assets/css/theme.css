@@ -1,0 +1,85 @@
+/* 
+components and theme specific styles goes here.
+*/
+
+:root{
+    --primary-yellow: #D59117;
+}
+
+/* utility helpers */
+.upper-text{
+    text-transform: uppercase !important;
+}
+
+.white-text{
+    color: #fff !important;
+}
+
+.theme-yellow-text{
+    color: var(--primary-yellow) !important;
+}
+
+.white-bg{
+    background-color: #fff !important;
+}
+
+.theme-yellow-bg{
+    background-color: var(--primary-yellow);
+}
+
+body{
+    background-color: #000;
+    color: var(--primary-yellow);
+    font-family: 'Spartan', sans-serif;
+}
+
+h1{
+    font-size: 55px;
+}
+
+h1.underlined{
+    display: inline-block;
+    position: relative;
+}
+
+h1.underlined::after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1.8px;
+    width: 100%;
+    background-color: #fff;
+    content: '';
+}
+
+/* theme buttons */
+
+.theme-primary-btn{
+    background-color: var(--primary-yellow);
+    color: #000;
+    border-radius: 50px;
+    min-width: 200px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    min-height: 50px;
+    /* font-family: 'Spartan', sans-serif; */
+    line-height: 14px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all ease-in-out 0.35s;
+}
+
+.theme-primary-btn:hover{
+    background-color: #ba7f10;
+    color: #000;
+}
+.theme-primary-btn .fas{
+    margin-left: 13px;
+    transform: translateY(-1px);
+}
+
