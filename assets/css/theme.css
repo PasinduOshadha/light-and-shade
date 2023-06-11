@@ -34,7 +34,22 @@ body{
 }
 
 h1{
-    font-size: 55px;
+    font-size: 40px;
+    line-height: 45px;
+}
+
+h2{
+    font-size: 35px;
+    line-height: 40px;
+}
+
+h3{
+    font-size: 30px;
+    line-height: 45px;
+}
+
+h4{
+    font-size: 25px !important;
 }
 
 h1.underlined{
@@ -52,6 +67,10 @@ h1.underlined::after{
     content: '';
 }
 
+h1 span{
+    color: var(--primary-yellow);
+}
+
 /* theme buttons */
 
 .theme-primary-btn{
@@ -65,7 +84,7 @@ h1.underlined::after{
     min-height: 50px;
     /* font-family: 'Spartan', sans-serif; */
     line-height: 14px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: -0.01em;
     text-transform: uppercase;
@@ -78,8 +97,38 @@ h1.underlined::after{
     background-color: #ba7f10;
     color: #000;
 }
+
+.theme-primary-btn:focus,
+.theme-primary-btn:active{
+    background-color: var(--primary-yellow);
+        border:none;
+    outline: none;
+    box-shadow: none;
+    color: #000;
+}
 .theme-primary-btn .fas{
     margin-left: 13px;
     transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+    h1{
+        font-size: 30px;
+        line-height: 45px;
+    }
+    
+    h2{
+        font-size: 26px;
+        line-height: 40px;
+    }
+    
+    h3{
+        font-size: 22px;
+        line-height: 45px;
+    }
+    
+    h4{
+        font-size: 20px !important;
+    }
 }
 

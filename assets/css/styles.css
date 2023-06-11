@@ -7,8 +7,10 @@ Generic styles goes here
 /* Navbar css */
 .navbar {
     border: none;
-    background-color: #000;
+    background-color: transparent;
     margin-bottom: 0;
+    transition: all 0.35s ease-in-out;
+    z-index: 99;
 }
 
 .navbar .container-fluid {
@@ -28,7 +30,7 @@ Generic styles goes here
 }
 
 .navbar .navbar-nav .active>a {
-    background-color: #000;
+    background-color: transparent;
     color: var(--primary-yellow);
 }
 
@@ -42,9 +44,15 @@ Generic styles goes here
     color: #fff;
 }
 
+.navbar .navbar-nav>li>a:hover,
+.navbar .navbar-nav>li.active>a:hover {
+    background-color: transparent;
+    color: var(--theme-yellow);
+}
+
 .navbar ul li {
     font-family: Spartan;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 44px;
     letter-spacing: -0.01em;
@@ -75,7 +83,7 @@ Generic styles goes here
     outline: none;
     box-shadow: none;
     border: none;
-    min-height: 60px;
+    min-height: 30px;
     border: 1px solid #828282;
     padding: 5px;
     padding-right: 15px;
@@ -97,15 +105,16 @@ Generic styles goes here
 
 .navbar .cta-btn-wrapper .cta-btn-primary .title,
 .navbar .cta-btn-wrapper .cta-btn-secondary .title {
-    font-size: 11px;
+    font-size: 9px;
+    line-height: 12px;
     text-transform: uppercase;
 }
 
 .navbar .cta-btn-wrapper .cta-btn-primary .contact-no,
 .navbar .cta-btn-wrapper .cta-btn-secondary .contact-no {
-    font-weight: 700;
-    font-size: 20.8074px;
-    line-height: 23px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
     text-transform: uppercase;
 }
 
@@ -117,7 +126,7 @@ Generic styles goes here
     outline: none;
     box-shadow: none;
     border: none;
-    min-height: 60px;
+    min-height: 30px;
     border: none;
     padding: 5px;
     padding-right: 15px;
@@ -127,12 +136,21 @@ Generic styles goes here
     margin-right: 20px;
 }
 
+.navbar .cta-btn-wrapper img {
+    width: 40px;
+}
+
 .navbar .cta-btn-wrapper .search-icon {
     margin-right: 15px;
 }
 
+.navbar-bg-black {
+    background-color: #000;
+}
+
 /* Homepage section 1 css : start */
 .homepage-cover {
+    padding-top: 80px;
     background: #000 url('../img/bg-fallback.png');
     background-size: cover;
     background-position: center center;
@@ -170,9 +188,19 @@ Generic styles goes here
 }
 
 .homepage-cover .services-img {
-    width: 779px;
+    width: 600px;
     margin-bottom: 40px;
     max-width: 100%;
+}
+
+.homepage-cover h4 {
+    font-weight: 200 !important;
+}
+
+.homepage-cover h1,
+h2,
+h3 {
+    margin-top: 0;
 }
 
 /* Homepage section 1 css : end */
@@ -184,7 +212,7 @@ Homepage carousel block
 Note: Since the home page carousel blocks are same, one styles block is defined
 */
 
-.carousel-block{
+.carousel-block {
     margin-bottom: 80px;
 }
 
@@ -194,7 +222,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     margin-bottom: 28px;
 }
 
-.carousel-block .carousel-row .swiper-slide .item-link{
+.carousel-block .carousel-row .swiper-slide .item-link {
     position: absolute;
     left: 0;
     top: 0;
@@ -212,61 +240,63 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     text-align: left;
 }
 
-.carousel-block .carousel-row .swiper-slide .item-body{
+.carousel-block .carousel-row .swiper-slide .item-body {
     display: flex;
     flex-direction: row;
     align-items: center;
     column-gap: 5px;
 }
 
-.carousel-block .carousel-row .swiper-slide .item-body .item-content{
+.carousel-block .carousel-row .swiper-slide .item-body .item-content {
     width: 80%;
 }
 
-.carousel-block .carousel-row .swiper-slide .item-body .item-content h5{
+.carousel-block .carousel-row .swiper-slide .item-body .item-content h5 {
     font-size: 22px;
     color: #000;
     margin-bottom: 0;
 }
 
-.carousel-block .carousel-row .swiper-slide .item-body .item-content small{
+.carousel-block .carousel-row .swiper-slide .item-body .item-content small {
     font-size: 18px;
     line-height: 28px;
 }
 
-.carousel-block .carousel-row .swiper-slide .item-body .item-content > div{
+.carousel-block .carousel-row .swiper-slide .item-body .item-content>div {
     font-size: 22px;
     line-height: 27px;
     font-weight: 600;
 }
 
-.carousel-block .carousel-row .swiper-slide .item-body .readmore-link{
+.carousel-block .carousel-row .swiper-slide .item-body .readmore-link {
     width: 20%;
     text-align: center;
 }
 
-.carousel-block .carousel-row .swiper-slide .item-body .readmore-link a{
+.carousel-block .carousel-row .swiper-slide .item-body .readmore-link a {
     color: #000;
 }
-.carousel-block .carousel-row .swiper-slide{
+
+.carousel-block .carousel-row .swiper-slide {
     background-color: #fff;
     color: var(--primary-yellow);
     border-radius: 10px 15.1846px 15.1846px 15.1846px;
     padding: 6px;
     padding-bottom: 12px;
 }
-.carousel-block .carousel-row .swiper-slide img{
+
+.carousel-block .carousel-row .swiper-slide img {
     max-width: 100%;
 }
 
 .carousel-block .carousel-row .swiper-button-prev::after,
-.carousel-block .carousel-row .swiper-button-next::after{
+.carousel-block .carousel-row .swiper-button-next::after {
     color: transparent;
 }
 
 
 .carousel-block .carousel-row .swiper-button-prev,
-.carousel-block .carousel-row .swiper-button-next{
+.carousel-block .carousel-row .swiper-button-next {
     background: url('../img/slider-prev.svg');
     background-size: contain;
     background-position: center center;
@@ -276,39 +306,48 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     transform: translateX(-30px);
 }
 
-.carousel-block .carousel-row .swiper-button-next{
+.carousel-block .carousel-row .swiper-button-next {
     transform: rotate(180deg) translateX(-30px);
 }
 
-.carousel-block .carousel-row .swiper-pagination{
+.carousel-block .carousel-row .swiper-pagination {
     transform: translateY(50px);
 }
 
-.carousel-block .carousel-row .swiper-pagination .swiper-pagination-bullet{
+.carousel-block .carousel-row .swiper-pagination .swiper-pagination-bullet {
     height: 16px;
     width: 16px;
-    background-color: rgba(255,255,255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
-.carousel-block .carousel-row .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
-    background-color: #fff;;
+.carousel-block .carousel-row .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #fff;
+    ;
 }
 
 /* Homepage tabs block (section 3) css : start */
-.tabs-block{
+.tabs-block {
     margin-bottom: 80px;
 }
-.tabs-block .tab-pills-wrapper .panel-default > .panel-heading{
+
+.tabs-block .tab-pills-wrapper .panel-default>.panel-heading {
     background-color: #000;
     border: none;
 }
-.tabs-block .tab-pills-wrapper .panel-default{
+
+.tabs-block .tab-pills-wrapper .panel-default {
     border: none;
 }
-.tabs-block .tab-pills-wrapper .panel-default .nav-tabs{
-    border-bottom: 0;
+
+.tabs-block .tab-pills-wrapper .panel-default .nav-tabs {
+    border-bottom: 1px solid #4D4D4D !important;
+    padding-bottom: 10px;
+    width: fit-content;
+    margin-left: auto;
+    padding-right: 0;
 }
-.tabs-block .tab-pills-wrapper ul{
+
+.tabs-block .tab-pills-wrapper ul {
     background-color: #000;
     color: #fff;
     display: flex;
@@ -316,54 +355,73 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     justify-content: flex-end;
 }
 
-.tabs-block .tab-pills-wrapper ul li a{
-    color: #fff;
+.tabs-block .tab-pills-wrapper ul li a {
+    color: #4B4B4B !important;
     border: none !important;
 }
 
-.tabs-block .tab-pills-wrapper ul li.active a{
-    color: #000;
-    background-color: var(--primary-yellow);
+.tabs-block .tab-pills-wrapper ul li.active a {
+    color: #000 !important;
+    font-weight: 600;
+    background-color: var(--primary-yellow) !important;
     border-radius: 50px;
 }
 
-.tabs-block .tab-pills-wrapper ul li.active a:hover{
+/* .tabs-block .tab-pills-wrapper ul li.active a{
+    background: red;
+} */
+
+.tabs-block .panel {
+    margin-bottom: 0;
+}
+
+.tabs-block .tab-pills-wrapper {
+    margin-top: 10px;
+}
+
+.tabs-block .nav::before,
+.tabs-block .nav::after {
+    display: none;
+}
+
+.tabs-block .tab-pills-wrapper ul li.active a:hover {
     cursor: pointer;
 }
 
-.tabs-block .tab-pills-wrapper ul li a:hover{
-    color:var(--primary-yellow);
+.tabs-block .tab-pills-wrapper ul li a:hover {
+    color: var(--primary-yellow);
     background-color: #000;
     border: none !important;
     border-radius: 50px;
     cursor: pointer;
 }
-.tabs-block .tab-panel-wrapper{
+
+.tabs-block .tab-panel-wrapper {
     margin-top: 30px;
 }
 
-.tabs-block .panel-body{
+.tabs-block .panel-body {
     padding: 0;
 }
 
-.tabs-block .theme-primary-btn{
+.tabs-block .theme-primary-btn {
     margin-top: 50px;
 }
 
-.tabs-block .projects-row.row{
+.tabs-block .projects-row.row {
     display: flex;
     flex-direction: row;
     column-gap: 10px;
 }
 
-.tabs-block .projects-row .project-item{
+.tabs-block .projects-row .project-item {
     background-color: #fff;
     padding: 6px;
     border-radius: 12px;
     padding-bottom: 12px;
 }
 
-.tabs-block .projects-row .project-item a.project-item-link{
+.tabs-block .projects-row .project-item a.project-item-link {
     position: absolute;
     left: 0;
     top: 0;
@@ -372,18 +430,18 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 
 }
 
-.tabs-block .projects-row .project-item .item-body{
+.tabs-block .projects-row .project-item .item-body {
     display: flex;
     flex-direction: row;
     align-items: center;
     column-gap: 5px;
 }
 
-.tabs-block .projects-row .project-item .item-content{
+.tabs-block .projects-row .project-item .item-content {
     width: 80%;
 }
 
-.tabs-block .projects-row .project-item .project-title{
+.tabs-block .projects-row .project-item .project-title {
     color: #000;
     font-size: 18px;
     font-weight: 600;
@@ -393,68 +451,71 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     margin-top: 20px;
 }
 
-.tabs-block .projects-row .project-item .item-body .readmore-link{
+.tabs-block .projects-row .project-item .item-body .readmore-link {
     width: 10%;
     text-align: center;
 }
 
-.tabs-block .projects-row .project-item .item-body .readmore-link a{
+.tabs-block .projects-row .project-item .item-body .readmore-link a {
     color: #000;
 }
 
-.tabs-block .projects-row .project-item .project-location{
+.tabs-block .projects-row .project-item .project-location {
     color: var(--primary-yellow);
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.01em;
 }
 
-.tabs-block .projects-row .project-item .item-thumb{
+.tabs-block .projects-row .project-item .item-thumb {
     max-width: 100%;
     border-radius: 10px;
 }
+
 /* Homepage tabs block (section 3) css : start */
 
 
 /* testimonial css : start */
-.testimonial-block{
+.testimonial-block {
     margin-bottom: 80px;
 }
-.testimonial-block .testimonial-slider{
+
+.testimonial-block .testimonial-slider {
     max-width: 800px;
     border-radius: 15px;
     overflow-x: hidden;
 }
-.testimonial-block .testimonial-slider{
+
+.testimonial-block .testimonial-slider {
     margin-left: auto;
     margin-right: auto;
 }
 
 .testimonial-block .swiper-button-prev::after,
-.testimonial-block .swiper-button-next::after{
+.testimonial-block .swiper-button-next::after {
     color: transparent;
 }
 
 .testimonial-block .testimonial-prev,
-.testimonial-block .testimonial-next{
+.testimonial-block .testimonial-next {
     background: url('../img/slider-prev.svg');
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
     width: 65px;
     height: 65px;
-    transform: translateX(-30px);
+    transform: translate(-30px, -30px);
 }
 
-.testimonial-block .testimonial-next{
-    transform: rotate(180deg) translateX(-30px);
+.testimonial-block .testimonial-next {
+    transform: rotate(180deg) translate(-30px, 30px);
 }
 
-.testimonial-block .swiper-pagination{
+.testimonial-block .swiper-pagination {
     transform: translateY(50px);
 }
 
-.testimonial-block .testimonial-slider .testimonial-item{
+.testimonial-block .testimonial-slider .testimonial-item {
     /* background-color: #fff; */
     height: auto;
     display: flex;
@@ -467,17 +528,17 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     column-gap: 0;
 }
 
-.testimonial-block .testimonial-slider .testimonial-item .image-wrapper{
+.testimonial-block .testimonial-slider .testimonial-item .image-wrapper {
     width: 40%;
 }
 
-.testimonial-block .testimonial-slider .testimonial-item .image-wrapper img{
+.testimonial-block .testimonial-slider .testimonial-item .image-wrapper img {
     max-width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.testimonial-block .testimonial-slider .testimonial-item .content-wrapper{
+.testimonial-block .testimonial-slider .testimonial-item .content-wrapper {
     width: 60%;
     text-align: center;
     padding-left: 30px;
@@ -485,7 +546,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     background-color: #fff;
 }
 
-.testimonial-block .testimonial-slider .testimonial-item .content-wrapper .user-icon{
+.testimonial-block .testimonial-slider .testimonial-item .content-wrapper .user-icon {
     border: 3px solid var(--primary-yellow);
     border-radius: 100px;
     width: 60px;
@@ -493,7 +554,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     margin-bottom: 20px;
 }
 
-.testimonial-block .testimonial-slider .testimonial-item .content-wrapper .name{
+.testimonial-block .testimonial-slider .testimonial-item .content-wrapper .name {
     font-size: 20px;
     font-weight: 700;
     line-height: 16px;
@@ -502,42 +563,43 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     margin-bottom: 7px;
 }
 
-.testimonial-block .testimonial-slider .testimonial-item .content-wrapper .designation{
+.testimonial-block .testimonial-slider .testimonial-item .content-wrapper .designation {
     color: #292929;
     margin-bottom: 7px;
 }
 
-.testimonial-block .testimonial-slider .testimonial-item .content-wrapper .rating{
+.testimonial-block .testimonial-slider .testimonial-item .content-wrapper .rating {
     height: 20px;
     margin-bottom: 15px;
 }
 
-.testimonial-block .testimonial-slider .testimonial-item .content-wrapper .testimonial-content{
+.testimonial-block .testimonial-slider .testimonial-item .content-wrapper .testimonial-content {
     color: #000;
     font-size: 14px;
     font-weight: 300;
 }
 
-.testimonial-block .testimonial-pagination{
+.testimonial-block .testimonial-pagination {
     text-align: center;
     margin-top: 20px;
 }
 
-.testimonial-block .testimonial-pagination .swiper-pagination-bullet{
+.testimonial-block .testimonial-pagination .swiper-pagination-bullet {
     height: 12px;
     width: 12px;
-    background-color: rgba(255,255,255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
-.testimonial-block .testimonial-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
-    background-color: #fff;;
+.testimonial-block .testimonial-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #fff;
+    ;
 }
 
 /* testimonial css : end */
 
 /* FAQ block css: start */
 
-.faq-section{
+.faq-section {
     background: url('../img/window-blinds-couch.png');
     background-position: center right;
     background-size: 40%;
@@ -545,7 +607,11 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     margin-bottom: 80px;
 }
 
-.faq-section .faq-block-title{
+.faq-section .panel {
+    background-color: #191919 !important;
+}
+
+.faq-section .faq-block-title {
     font-size: 55px;
     font-weight: 300;
     line-height: 74px;
@@ -556,12 +622,12 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     max-width: 610px;
 }
 
-.faq-section .faq-block-title span{
+.faq-section .faq-block-title span {
     color: var(--primary-yellow);
 }
 
 .faq-section .faq-block-wrapper .faq-block .panel-heading,
-.faq-section .faq-block-wrapper .faq-block .panel{
+.faq-section .faq-block-wrapper .faq-block .panel {
     background-color: #191919;
     border: none;
     position: relative;
@@ -569,18 +635,18 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     overflow: hidden;
 }
 
-.faq-section .faq-block-wrapper .faq-block .panel-heading{
+.faq-section .faq-block-wrapper .faq-block .panel-heading {
     padding-top: 20px;
 }
 
-.faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a{
+.faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a {
     color: #fff;
     font-weight: 700;
     font-size: 18px;
     text-decoration: none;
 }
 
-.faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a.collapsed{
+.faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a.collapsed {
     color: #CFD3D7;
     font-weight: 700;
     font-size: 18px;
@@ -595,7 +661,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     padding-left: 15px;
 }
 
-.faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a::after{
+.faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a::after {
     position: absolute;
     height: 20px;
     width: 20px;
@@ -611,29 +677,30 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     background-position: center;
 }
 
-.faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a.collapsed::after{
+.faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a.collapsed::after {
     background: url('../img/plus-sign.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
 
-.faq-section .faq-block-wrapper .faq-block .panel-body{
+.faq-section .faq-block-wrapper .faq-block .panel-body {
     border: none;
     color: #CFD3D7;
     font-size: 13px;
     font-weight: 300;
     line-height: 1.6em;
 }
+
 /* FAQ block css: end */
 
 /* Blog section css: start */
 
-.blog-block{
+.blog-block {
     margin-bottom: 80px;
 }
 
-.blog-block .blog-wrapper{
+.blog-block .blog-wrapper {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -642,12 +709,12 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     margin-bottom: 50px;
 }
 
-.blog-block .blog-wrapper .blog-post{
+.blog-block .blog-wrapper .blog-post {
     background-color: #191919;
     display: flex;
 }
 
-.blog-block .blog-wrapper .blog-post .post-loop-content{
+.blog-block .blog-wrapper .blog-post .post-loop-content {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 20px;
@@ -655,14 +722,14 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     flex-direction: column;
 }
 
-.blog-block .blog-wrapper .post-1{
+.blog-block .blog-wrapper .post-1 {
     grid-area: 1 / 1 / 7 / 5;
     overflow: hidden;
     flex-direction: column;
     border-radius: 7.76px;
 }
 
-.blog-block .blog-wrapper .post-1 img{
+.blog-block .blog-wrapper .post-1 img {
     max-width: 100%;
     width: 530px;
     height: 390px;
@@ -671,12 +738,12 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     border-top-right-radius: 7.76px;
 }
 
-.blog-block .blog-wrapper .blog-post .date{
+.blog-block .blog-wrapper .blog-post .date {
     font-size: 12px;
 }
 
 
-.blog-block .blog-wrapper .blog-post .post-title{
+.blog-block .blog-wrapper .blog-post .post-title {
     font-size: 24px;
     color: #fff;
     font-weight: 600;
@@ -687,8 +754,8 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     letter-spacing: 0.01em;
 }
 
-.blog-block .blog-wrapper .blog-post .post-link{
-    font-size:14px;
+.blog-block .blog-wrapper .blog-post .post-link {
+    font-size: 14px;
     color: #fff;
     text-transform: uppercase;
     line-height: 16px;
@@ -697,32 +764,33 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 
 .blog-block .blog-wrapper .post-2,
 .blog-block .blog-wrapper .post-3,
-.blog-block .blog-wrapper .post-4{
+.blog-block .blog-wrapper .post-4 {
     flex-direction: row;
     border-radius: 9.9px;
 }
 
-.blog-block .blog-wrapper .post-2{
+.blog-block .blog-wrapper .post-2 {
     grid-area: 1 / 5 / 3 / 11;
 }
 
-.blog-block .blog-wrapper .post-2 img{
+.blog-block .blog-wrapper .post-2 img {
     height: 100%;
     width: 200px;
     object-fit: cover;
 }
 
 
-.blog-block .blog-wrapper .post-3{
+.blog-block .blog-wrapper .post-3 {
     grid-area: 3 / 5 / 5 / 11;
 }
 
-.blog-block .blog-wrapper .post-4{
+.blog-block .blog-wrapper .post-4 {
     grid-area: 5 / 5 / 7 / 11;
 }
 
-.blog-block .blog-section-title{
-    font-size: 55px;;
+.blog-block .blog-section-title {
+    font-size: 55px;
+    ;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
@@ -733,7 +801,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     margin-right: auto;
 }
 
-.blog-block .blog-section-title span{
+.blog-block .blog-section-title span {
     color: var(--primary-yellow);
 
 }
@@ -741,15 +809,16 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 /* Blog section css: end */
 
 /* logo slider css: start */
-.logo-slider-block{
-   /* margin-bottom: 80px; */
-   background-color: #D0D0D0;
-   padding-bottom: 80px;
-   padding-top: 20px;
+.logo-slider-block {
+    /* margin-bottom: 80px; */
+    background-color: #D0D0D0;
+    padding-bottom: 80px;
+    padding-top: 20px;
 }
 
-.logo-slider-block .logo-slider-section-title{
-    font-size: 55px;;
+.logo-slider-block .logo-slider-section-title {
+    font-size: 55px;
+    ;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
@@ -757,7 +826,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     position: relative;
 }
 
-.logo-slider-block .logo-slider-section-title::after{
+.logo-slider-block .logo-slider-section-title::after {
     position: absolute;
     bottom: -15px;
     left: 50%;
@@ -768,53 +837,58 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     transform: translateX(-50%);
 }
 
-.logo_slider .logo-item img{
+.logo_slider .logo-item img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
+
 }
+
 /* logo slider css: end */
 
 /* footer css: start */
-.footer-section{
+.footer-section {
     position: relative;
 }
-.footer-section .bg-row{
+
+.footer-section .bg-row {
     min-height: 400px;
 }
-.footer-section .google-review-widget{
+
+.footer-section .google-review-widget {
     text-align: center;
     /* margin-top: -150px; */
     transform: translateY(-70px);
     /* margin-bottom: 60px; */
 }
-.footer-section .google-review-widget img{
-    max-width: 100%;
-}
-.footer-section .footer-main-img{
+
+.footer-section .google-review-widget img {
     max-width: 100%;
 }
 
-.footer-section .footer-bg-wrapper .col-md-7{
+.footer-section .footer-main-img {
+    max-width: 100%;
+}
+
+.footer-section .footer-bg-wrapper .col-md-7 {
     min-height: 400px;
     display: flex;
     /* align-items: center; */
 }
 
-.footer-section .footer-info-row .col-left{
+.footer-section .footer-info-row .col-left {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
 
-.footer-section .footer-info-row .col-left .row-1{
+.footer-section .footer-info-row .col-left .row-1 {
     display: flex;
     flex-direction: row;
 }
 
-.footer-bg-wrapper::before{
+.footer-bg-wrapper::before {
     background: url('../img/footer-bg-img.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -828,11 +902,11 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     /* z-index: 1; */
 }
 
-.footer-section .footer-bg-wrapper .footer-main-img{
+.footer-section .footer-bg-wrapper .footer-main-img {
     margin-bottom: 40px;
 }
 
-.footer-section .footer-info-wrapper{
+.footer-section .footer-info-wrapper {
     background-color: #000;
     z-index: 2;
     position: relative;
@@ -840,43 +914,49 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     padding-bottom: 30px;
 }
 
-.footer-section .footer-info-wrapper .horizontal-icon-box .icon{
+.footer-section .footer-info-wrapper .horizontal-icon-box .icon {
     background-color: #2E2E2E;
     border-radius: 50px;
-    height: 55px;
-    width: 55px;
+    height: 35px;
+    width: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.footer-section .footer-info-wrapper .horizontal-icon-box .icon .fas{
-    font-size: 20px;
+.footer-section .footer-info-wrapper .horizontal-icon-box .icon .fas {
+    font-size: 14px;
     color: #fff;
 }
 
-.footer-section .footer-info-wrapper .horizontal-icon-box .icon-box-content{
+.footer-section .footer-info-wrapper .horizontal-icon-box .icon-box-content {
     display: flex;
     flex-direction: column;
 }
 
-.footer-section .footer-info-wrapper .horizontal-icon-box{
+.footer-section .footer-info-wrapper .horizontal-icon-box {
     display: flex;
     column-gap: 8px;
     margin-right: 10px;
+    margin-bottom: 15px;
 }
 
-.footer-section .footer-info-wrapper .horizontal-icon-box .title{
+.footer-section .footer-info-wrapper .horizontal-icon-box .title {
     color: #fff;
     text-transform: uppercase;
+    font-size: 10px;
 }
 
-.footer-section .footer-info-wrapper .horizontal-icon-box .sub-title a{
+.footer-section .footer-info-wrapper .horizontal-icon-box .sub-title div {
+    font-size: 14px !important;
+}
+
+.footer-section .footer-info-wrapper .horizontal-icon-box .sub-title a {
     color: #fff;
     text-transform: lowercase;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 14px !important;
 }
 
 .footer-section .footer-info-wrapper .icon-list-wrapper ul {
@@ -885,11 +965,11 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     flex-direction: row;
 }
 
-.footer-section .footer-info-wrapper .icon-list-wrapper ul li{
+.footer-section .footer-info-wrapper .icon-list-wrapper ul li {
     background-color: #2E2E2E;
     border-radius: 50px;
-    height: 55px;
-    width: 55px;
+    height: 35px;
+    width: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -897,35 +977,1380 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     margin-right: 8px;
 }
 
-.footer-section .footer-info-wrapper .icon-list-wrapper ul li .fab{
-    font-size: 20px;
+.footer-section .footer-info-wrapper .icon-list-wrapper ul li .fab {
+    font-size: 16px;
     color: #fff;
 }
 
 /* address block */
-.footer-section .footer-info-wrapper .horizontal-icon-box.address-box .sub-title div{
+.footer-section .footer-info-wrapper .horizontal-icon-box.address-box .sub-title div {
     color: #fff;
     font-weight: 600;
     font-size: 18px;
 }
 
-.footer-section .footer-info-wrapper .horizontal-icon-box.address-box .sub-title a{
+.footer-section .footer-info-wrapper .horizontal-icon-box.address-box .sub-title a {
     color: var(--primary-yellow);
     font-size: 14px;
     font-weight: 300;
     text-transform: uppercase;
 }
-.footer-section .footer-info-wrapper .horizontal-icon-box.address-box .sub-title .fas{
+
+.footer-section .footer-info-wrapper .horizontal-icon-box.address-box .sub-title .fas {
     font-size: 16px;
 }
+
+.footer-section .copyiright-row {
+    background-color: #232323;
+    text-align: center;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-section .copyiright-row img {
+    margin-left: 3px;
+    margin-left: 3px;
+}
+
+.footer-section .footer-main-img {
+    max-width: 500px;
+}
+
+.footer-section .col-right h4 {
+    color: #fff;
+    font-size: 18px !important;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.footer-section .col-right h4 span {
+    color: var(--primary-yellow);
+}
+
+.footer-section .col-right input[type=email] {
+    border-radius: 50px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding-left: 15px;
+    margin-right: 0;
+    background: rgba(148, 148, 148, 0.1);
+    width: 190px;
+    margin-left: auto;
+}
+
+.footer-section .col-right form {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.footer-section .col-right form .btn {
+    height: 40px;
+    margin-left: 0;
+    border-radius: 0;
+    background: var(--primary-yellow);
+    border: none;
+    width: 50px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.footer-section .col-right form .btn .fab {
+    font-size: 18px;
+    transform: translatex(-3px)
+}
+
+.footer-section .col-right form .btn:active,
+.footer-section .col-right form .btn:focus {
+    border: none;
+}
+
+.footer-section .copyiright-row span{
+    height: 12px;
+    width: 1px;
+    background-color: #fff;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 3px;
+}
+
 /* footer css: end */
 
 
+/* index-1 page html css: start */
+.grid-section {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
 
+.grid-section .projects-row.row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.grid-section .projects-row {
+    margin-bottom: 10px;
+}
+
+.grid-section .projects-row .project-item {
+    background-color: #fff;
+    padding: 6px;
+    border-radius: 12px;
+    padding-bottom: 12px;
+}
+
+.grid-section .projects-row .project-item a.project-item-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+}
+
+.grid-section .projects-row .project-item .item-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.grid-section .projects-row .project-item .item-content {
+    width: 80%;
+}
+
+.grid-section .projects-row .project-item .project-title {
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1em;
+    letter-spacing: 0.01em;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.grid-section.projects-row .project-item .item-body .readmore-link {
+    width: 10%;
+    text-align: center;
+}
+
+.grid-section .projects-row .project-item .item-body .readmore-link a {
+    color: #000;
+}
+
+.grid-section .projects-row .project-item .project-location {
+    color: var(--primary-yellow);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.grid-section .projects-row .project-item .item-thumb {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.grid-section h1 {
+    margin-bottom: 50px;
+}
+
+/* index-1 page html css: end */
+
+/* Panel start */
+.panel,
+.panel-heading {
+    background-color: transparent !important;
+    border: none
+}
+
+.panel .nav-tabs {
+    border: none;
+    display: flex;
+    column-gap: 10px;
+}
+
+.panel .nav-tabs li.active a {
+    background-color: var(--primary-yellow);
+    border: 1px solid transparent;
+    color: #000;
+}
+
+.panel .nav-tabs li a {
+    border: none;
+    border-radius: 50px;
+    padding: 5px 15px;
+    border: none;
+    color: #fff !important;
+    border: 1px solid #fff;
+}
+
+.panel .nav-tabs li a:hover {
+    background-color: var(--primary-yellow);
+    color: #000;
+    border: 1px solid transparent;
+}
+
+/* Panel end */
+
+/* Carrers Page start*/
+/* Carrers Page: job tabs start */
+.job-vacancy-block .panel {
+    margin-bottom: 0px;
+}
+
+.job-vacancy-block .panel .nav-tabs {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.job-vacancy-block {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.job-vacancy-block h1 {
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.job-vacancy-block h1::before {
+    position: absolute;
+    height: 1px;
+    width: 150px;
+    background-color: #fff;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    content: '';
+}
+
+.job-vacancy-block .title-row {
+    margin-bottom: 20px;
+}
+
+.job-vacancy-block .category-tabs {}
+
+.job-vacancy-block .category-tabs .job-post {
+    background-color: #191919;
+    border-radius: 13.38px;
+    padding: 10px 25px;
+    padding-bottom: 20px;
+    width: calc(50% - 10px);
+}
+
+.job-vacancy-block .category-tabs .job-post .job-title {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.job-vacancy-block .category-tabs .job-post .type {
+    color: #fff;
+    font-size: 9px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    padding-top: 7px;
+    line-height: 10px;
+    border-radius: 50px;
+    display: inline-block;
+    transform: translatey(-5px);
+}
+
+.job-vacancy-block .category-tabs .job-post .job-description {
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.job-vacancy-block .category-tabs .job-post a {
+    color: var(--theme-yellow);
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.job-vacancy-block .category-tabs .job-posts-row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Carrers Page: job tabs end */
+
+/* Carrers Page:end */
+
+
+
+/* Careers single page: start */
+.job-info-section {
+    color: #fff;
+    padding-top: 80px
+}
+
+.job-info-section .job-info-title {
+    font-size: 35px
+}
+
+.job-info-section .job-info-title-hr {
+    height: 1px;
+    background: #fff;
+    min-width: 450px;
+    width: 35%;
+    margin-bottom: 15px;
+}
+
+.job-info-section .job-info-icon-list {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 25px;
+    margin-bottom: 15px;
+}
+
+.job-info-section .job-info-icon-list-item {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.job-info-section .job-info-description {
+    line-height: 1.6em;
+    margin-bottom: 25px;
+}
+
+.job-info-section .job-info-requirements,
+.job-info-section .job-info-tasks {
+    margin-bottom: 50px;
+}
+
+
+.job-info-section .job-info-tasks-title-wrapper,
+.job-info-section .job-info-requirements-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+}
+
+.job-info-section .job-info-tasks h3,
+.job-info-section .job-info-requirements h3 {
+    font-size: 22px;
+    position: relative;
+    min-width: fit-content;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    /* flex-grow: 1; */
+    /*     border: 1px solid red; */
+
+}
+
+.job-info-section .job-info-tasks .job-info-tasks-title-line,
+.job-info-section .job-info-requirements .job-info-requirements-title-line {
+    height: 1px;
+    flex-grow: 1;
+    /* width: fit-content; */
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.job-info-section .job-info-tasks .job-info-tasks-list li,
+.job-info-section .job-info-requirements .job-info-requirements-list li {
+    margin-bottom: 10px;
+}
+
+.job-info-section .job-info-requirements {
+    margin-bottom: 50px;
+}
+
+.job-info-section .job-info-cta-wrapper {
+    margin-bottom: 90px;
+}
+
+/* Careers single page: end */
+
+
+/* Product single page: start */
+
+/* Product cover: start */
+
+.product-single-page-content .product-page-cover {
+    height: 100vh;
+    min-height: 800px;
+    background-image: url('../img/product-img.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.product-single-page-content .product-page-cover::before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(4, 6, 15, 0.3) 26%, rgba(0, 0, 0, 0.3) 66%, rgba(0, 0, 0, 1) 100%);
+}
+
+/* Product cover: end */
+.product-single-page-content .product-page-cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.product-single-page-content .product-page-cover .container {
+    margin-bottom: 50px;
+    color: #fff;
+    text-align: center
+}
+
+.product-single-page-content .product-page-cover .container .product-brief h1 {
+    font-size: 40px;
+}
+
+.product-single-page-content .product-page-cover .container .product-brief .product-page-title-hr {
+    width: 20%;
+    min-width: 250px;
+}
+
+.product-single-page-content .product-page-short-discription {
+    width: 70%;
+    min-width: 400px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.product-single-page-content .product-page-cta-btn-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.product-single-page-content .product-page-cta-btn-wrapper .btn {
+    border-radius: 50px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px
+}
+
+.product-single-page-content .product-page-cta-btn-wrapper .btn span {
+    margin-right: 20px;
+}
+
+.product-single-page-content .product-page-cta-btn-wrapper .btn span {
+    display: line-block;
+}
+
+.product-single-page-content .product-page-cta-btn-wrapper .product-page-btn-video {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: transparent;
+}
+
+.product-single-page-content .product-page-cta-btn-wrapper .product-page-btn-360 {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.product-single-page-content .product-long-description {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.product-single-page-content .product-features {
+    background: rgba(217, 217, 217, 0.1);
+    border-radius: 22px;
+}
+
+.product-single-page-content .product-features .title-row h2 {
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+}
+
+.product-single-page-content .product-features .title-row .hr {
+    height: 1px;
+    width: 10%;
+    min-width: 100px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-single-page-content .product-features {
+    margin-bottom: 30px;
+}
+
+.product-single-page-content .product-features .feature-list-row .feature-list {
+    display: flex;
+    flex-direction: row;
+    row-gap: 10px;
+    justify-content: space-between;
+}
+
+.product-single-page-content .feature-list .feature-list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    width: calc(25% - 10px);
+}
+
+.product-single-page-content .feature-list .feature-list-item h4 {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 700;
+}
+
+.product-single-page-content .feature-list .feature-list-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.product-single-page-content .product-features .feature-list-row {
+    margin-bottom: 30px;
+}
+
+.product-single-page-content .product-projects-gallery {
+    margin-bottom: 80px;
+}
+
+.product-single-page-content .product-projects-gallery .title-row h2 {
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+}
+
+.product-single-page-content .product-projects-gallery .title-row .hr {
+    height: 1px;
+    width: 10%;
+    min-width: 100px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-single-page-content .product-projects-gallery .product-gallery .gallery-item img {
+    max-width: 100%;
+}
+
+.product-single-page-content .product-projects-gallery .swiper-button-prev::after,
+.product-single-page-content .product-projects-gallery .swiper-button-next::after {
+    color: transparent;
+}
+
+.product-single-page-content .product-projects-gallery .gallery-next,
+.product-single-page-content .product-projects-gallery .gallery-prev {
+    background: url('../img/slider-prev.svg');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    transform: translateX(-10px);
+    z-index: 2;
+}
+
+.product-single-page-content .product-projects-gallery .gallery-next {
+    transform: rotate(180deg) translateX(-10px);
+}
+
+.product-single-page-content .product-projects-gallery .swiper-pagination {
+    transform: translateY(50px);
+}
+
+.product-single-page-content .product-projects-gallery .swiper-pagination .swiper-pagination-bullet {
+    height: 10px;
+    width: 10px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.product-single-page-content .product-projects-gallery .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #fff;
+    ;
+}
+
+.product-single-page-content .product-contact-form .form-wrapper {
+    /* max-width: 600px; */
+}
+
+.product-single-page-content .product-contact-form {
+    margin-bottom: 80px;
+}
+
+.product-single-page-content .form-wrapper {
+    background-color: #1F1F1F;
+    padding: 20px 35px;
+    ;
+    border-radius: 12px;
+}
+
+.product-single-page-content .form-wrapper .row {
+    margin-bottom: 10px;
+}
+
+.product-single-page-content .form-wrapper .title-row {
+    margin-bottom: 30px;
+}
+
+.product-single-page-content .form-wrapper .title-row h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.product-single-page-content .form-wrapper .title-row .hr {
+    height: 1px;
+    background: #fff;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-single-page-content .form-wrapper .row div {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.product-single-page-content .form-wrapper input.form-control,
+.product-single-page-content .form-wrapper select.form-control {
+    background: rgba(148, 148, 148, 0.1);
+    border-radius: 55.57px;
+    padding: 25px 20px;
+    border-color: transparent;
+}
+
+.product-single-page-content .form-wrapper select.form-control {
+    /*     appearance: none; */
+    position: relative;
+}
+
+/* .form-wrapper .drop-arrow{
+    position: relative;
+    width: 100px;
+}
+.form-wrapper .drop-arrow::after{
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: red;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    display: block;
+} */
+
+.product-single-page-content .form-wrapper textarea.form-control {
+    border-radius: 20px;
+    background: rgba(148, 148, 148, 0.1);
+    border-color: transparent;
+    padding-top: 10px;
+}
+
+.product-single-page-content.form-wrapper input.form-control:focus,
+.product-single-page-content .form-wrapper select.form-control:focus,
+.product-single-page-content .form-wrapper textarea.form-control:focus {
+    outline: none;
+    border-color: var(--primary-yellow);
+    box-shadow: none;
+}
+
+.product-single-page-content .form-wrapper .action-btn-row {
+    margin-top: 30px;
+}
+
+/* Product single page: end */
 
 /* mobile styles */
 @media (max-width: 480px) {
     .navbar {
+        max-width: 100vw;
+    }
+
+    .navbar .cta-btn-primary {
+        display: none !important;
+    }
+
+    .navbar .navbar-brand {
+        height: 60px;
+    }
+
+    .navbar .navbar-header {
+        width: 100%;
+        max-width: 100vw;
+        ;
+    }
+
+    .navbar .cta-btn-wrapper {
+        display: none !important;
+    }
+
+    .navbar .navbar-collapse {
+        display: none !important;
+    }
+
+    .carousel-block .carousel-row .swiper-slide .item-body .item-content h5 {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    .carousel-block .carousel-row .swiper-slide {
+        padding: 5px;
+        border-radius: 7px;
+    }
+
+    .carousel-block .carousel-row .swiper-slide .item-body .item-content small {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .carousel-block .carousel-row .swiper-slide .item-body .item-content>div {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .carousel-block .carousel-row .swiper-button-next,
+    .carousel-block .carousel-row .swiper-button-prev {
         display: none;
     }
+
+    .carousel-block .carousel-row .swiper-pagination-bullet {
+        height: 10px;
+        width: 10px;
+    }
+
+    /* projects section:start */
+    .tabs-block .title-row>div {
+        text-align: center;
+    }
+
+    .tabs-block .title-row>div h1 {
+        margin-bottom: 30px;
+    }
+
+    .tabs-block .tab-pills-wrapper .panel-default .nav-tabs {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-bottom: 1px solid #4D4D4D !important;
+        flex-direction: row;
+        padding-bottom: 10px !important;
+        column-gap: 0px !important;
+        font-size: 12px;
+    }
+
+    .tabs-block .projects-row.row {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        justify-content: center;
+    }
+
+    .tabs-block .projects-row.row::before,
+    .tabs-block .projects-row.row::after {
+        display: none;
+    }
+
+    .tabs-block .projects-row.row .project-item {
+        width: calc(50% - 20px) !important;
+    }
+
+    .testimonial-block .testimonial-slider .testimonial-item {
+        flex-direction: column !important;
+    }
+
+    .testimonial-block .testimonial-prev,
+    .testimonial-block .testimonial-next {
+        display: none;
+    }
+
+    .testimonial-block .testimonial-slider .testimonial-item .image-wrapper {
+        width: 100% !important;
+        height: 200px;
+    }
+
+    .testimonial-block .testimonial-slider .testimonial-item .image-wrapper img {
+        width: 100%;
+    }
+
+    .testimonial-block .testimonial-slider .testimonial-item .content-wrapper {
+        width: 100% !important;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding-bottom: 30px;
+    }
+
+    .testimonial-block .testimonial-slider .testimonial-item .content-wrapper .user-icon {
+        width: 100px;
+        margin-top: -50px;
+    }
+
+
+    /* Faq section: start */
+
+
+    .faq-section .faq-block-title {
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .faq-section {
+        background: inherit;
+    }
+
+    .faq-section .faq-block-wrapper .faq-block .panel-heading {
+        min-height: 50px;
+
+    }
+
+    .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a {
+        width: 91%;
+        padding-right: 20px !important;
+        padding-left: 10px;
+        display: inline-block;
+        line-height: 1.5em;
+    }
+
+    .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title .target-title {
+        width: 95%;
+    }
+
+    .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title .target-title::after {
+        top: 50%;
+        right: 30px;
+    }
+
+    .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title .collapsed.target-title::after {
+        top: 37%;
+        right: 0px;
+    }
+
+
+    .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a.collapsed {
+        position: relative;
+        padding-top: 0px;
+        padding-right: 15px;
+        width: 95%;
+        line-height: 1.5em;
+    }
+
+    .faq-section .faq-block-wrapper .faq-block .panel-body {
+        width: 95%;
+        padding-left: 20px
+    }
+
+    /* FAQ section:end */
+
+    /* blog-section:start */
+    .blog-block .blog-section-title {
+        font-size: 30px;
+    }
+
+    .blog-block .blog-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-block .blog-wrapper .post-1,
+    .blog-block .blog-wrapper .post-2 {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 15px;
+        border-radius: 15px;
+    }
+
+    .blog-block .blog-wrapper .blog-post .date {
+        display: none;
+    }
+
+    .blog-block .blog-wrapper .post-2 img {
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+
+    .blog-block .blog-wrapper .post-3,
+    .blog-block .blog-wrapper .post-4 {
+        display: none;
+    }
+
+    .blog-block .blog-wrapper .blog-post .post-title {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    /* blog-section:end */
+
+    /* Logo slider section:start */
+    .logo-slider-block .logo-slider-section-title {
+        font-size: 30px;
+    }
+
+    .logo-slider-block .logo-slider-section-title::after {
+        bottom: 0;
+    }
+
+    .logo-slider-block {
+        padding-bottom: 60px
+    }
+
+    /* Logo slider section:end */
+
+    /* footer section: start */
+    .footer-section .google-review-widget img{
+        width: 180px;
+        transform: translateY(-0px);
+        z-index: 99;
+    }
+    
+    .footer-section .google-review-widget{
+        transform: translateY(-40px);
+        z-index: 99;
+    }
+    
+    .footer-section .footer-main-img{
+        display: none;
+    }
+    
+    .footer-section .col-md-7{
+        text-align: center;
+    }
+    
+    .footer-section .mobile-only-text{
+         display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 250px;
+    }
+    
+    .footer-section .mobile-only-text h2{
+        font-size: 35px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 35px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    
+    .footer-section .mobile-only-text h3{
+        margin-top: 0;
+        max-width: 300px;
+        line-height: 35px;
+        text-transform: uppercase;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .footer-section .mobile-only-text h3 span{
+        color: #fff !important;
+    }
+    
+    .footer-section .mobile-only-text .btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        column-gap: 10px;
+        min-width: 180px;
+        align-self: center;
+        width: fit-content;
+        margin-bottom: 10px;
+        border-radius: 50px;
+        background-color: #000;
+        border-color: #828282;
+        padding-right: 20px;
+        padding-left: 5px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    
+    .footer-section .mobile-only-text .btn > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    
+    .footer-section .mobile-only-text .btn > img{
+        width: 50px;
+    }
+    .footer-section .mobile-only-text .btn > div .title{
+        font-size: 14px;
+    }
+    
+    .footer-section .mobile-only-text .btn > div .contact-no{
+        font-weight: 600;
+        font-size: 20px
+    }
+    
+    .footer-section .footer-info-row{
+        display: flex;
+        flex-direction: column-reverse;
+    
+    }
+    
+    .footer-section .footer-info-row .col-right{
+        margin-bottom: 30px !important;
+        background: #1A1A1A;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .footer-section .footer-info-row .col-right h4{
+        text-align: center;
+    }
+    
+    .footer-section .footer-info-row .col-right form{
+        justify-content: center !important;
+            
+    }
+    
+    .footer-section .footer-info-row .col-right form input[type=email]{
+        margin-left: inherit;
+    }
+    
+    .footer-bg-wrapper::before{
+        background: url('../img/peeping-through-window-mobile.png');
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        z-index: -2;
+    }
+    
+    .footer-bg-wrapper::after{
+    background: rgb(0,0,0);
+    background:linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,1) 75%);
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        content: '';
+    }
+
+    .footer-section .icon-list-wrapper{
+        display: none;
+    }
+    
+    .footer-section .icon-list-wrapper-mobile{
+        display: flex !important;
+    }
+    
+    .address-box .icon-box-content{
+        width: 85%;
+    }
+    
+    .footer-section .footer-info-wrapper{
+        padding-bottom: 10px;
+    }
+    
+    .footer-section .copyiright-row{
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    
+    .footer-section .copyiright-row span{
+        display: none;
+    }
+    /* footer section: end */
+
+
+    /* carrers page: start */
+
+    .job-vacancy-block .title-row h1{
+        font-size: 30px;
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .job-vacancy-block .title-row h1 span{
+        color: var(--primary-yellow)
+    }
+    
+    .job-vacancy-block .panel .nav-tabs{
+        overflow-x: scroll;
+        width: 100%;
+        padding-bottom: 10px;
+        justify-content: flex-start;
+    }
+    
+    .job-vacancy-block .panel .nav-tabs::-webkit-scrollbar{
+        background-color: transparent;
+        width:1px;
+    }
+    
+    .job-vacancy-block .panel .nav-tabs li a{
+        white-space: nowrap;
+    }
+    
+    .job-vacancy-block .panel .nav-tabs::-webkit-scrollbar-thumb{
+      background-color: #000;
+      border-radius: 0px; 
+        width:1px;
+    }
+    
+    .job-vacancy-block .panel .nav-tabs::-webkit-scrollbar-track{
+      background-color: transparent; 
+        width:1px;
+    }
+    
+    .job-vacancy-block .panel-body{
+        padding-top: 0px;
+    }
+    
+    .job-vacancy-block .category-tabs .job-post{
+        width: calc(100% - 0px);
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px !important;
+    }
+    
+    
+    .job-vacancy-block .category-tabs .job-post .type{
+        order:-1;
+        display: block;
+        margin-top: 20px;
+        align-self: flex-start;
+    }
+    
+    .job-vacancy-block .category-tabs .job-post h3{
+        margin-bottom: 0px;
+        margin-top: 10px;
+        line-height: 18px;
+    }
+
+    /* carrers page: end */
+
+    /* careers page: start */
+    .job-info-section .job-info-title{
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    
+    .job-info-section{
+       padding-top: 40px;
+    }
+    
+    .job-info-section .job-info-icon-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    .job-info-section .job-info-icon-list .job-info-icon-list-item{
+        width: calc(50% - 15px);
+    }
+    
+    .job-info-section .job-info-icon-list .job-info-icon-list-item:nth-child(2){
+        text-align:  left;
+    }
+    
+    .job-info-section .job-info-icon-list .job-info-icon-list-item:nth-child(1){
+        text-align:  right;
+    }
+    
+    .job-info-section .job-info-icon-list .job-info-icon-list-item:nth-child(3){
+        width: 100%;  
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .job-info-section .job-info-description{
+        text-align: center;
+    }
+    
+    .job-info-section .job-info-tasks,
+    .job-info-section .job-info-requirements{
+        display: none;
+    }
+    /* carresrs page: end */
+
+    /* single product page: start */
+    .product-single-page-content .product-page-cover .container .product-brief h1{
+        font-size: 30px;
+    }
+    
+    .product-single-page-content .product-page-cta-btn-wrapper .product-page-btn-360{
+        display: none;
+    }
+    
+    .product-single-page-content .product-page-short-discription{
+        max-width: 90vw;
+        min-width: 200px;
+        width: 100%
+    }
+
+    .product-single-page-content .product-features .feature-list-row .feature-list{
+        flex-direction: column;
+        padding-left: 20px;
+    }
+    
+    .product-single-page-content .feature-list .feature-list-item{
+        width: 100%;
+    }
+    .product-single-page-content .product-features .feature-list-row{
+        margin-bottom: 10px;
+    }
+    /* single product page: end */
+
+    /* blinds/categories page: start */
+    .grid-section .projects-row .project-item{
+        width: calc(50% - 10px) !important;
+    }
+    
+    .grid-section .projects-row.row{
+        flex-wrap: wrap;
+        row-gap: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .grid-section .projects-row.row::before,
+    .grid-section .projects-row.row::after{
+       display: none; 
+    }
+    
+    .grid-section h1{
+        margin-bottom: 25px;
+    }
+    /* blinds/categories page: end */
+
+    /* projects section:end */
+
+    /* homepage */
+    /* curtains-section  */
+    /* .carousel-block .carousel-row .swiper-slide .item-link */
+}
+
+
+/* nav menu */
+.burger {
+    width: 45px;
+    height: 45px;
+    border-radius: 20px;
+    background: #000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+.burger-strip {
+    transition: all .5s ease;
+}
+
+.strip div {
+    height: 3px;
+    border-radius: 50px;
+    background: #fff;
+    margin: 4px;
+    transition: all .55s cubic-bezier(0.075, 0.82, 0.165, 1);
+    width: 20px;
+}
+
+
+/* BURGER 2 */
+#menu-toggle:checked~.burger-strip-2 div:first-child {
+    transform: translateY(7px) rotate(45deg);
+    background: var(--primary-yellow);
+}
+
+#menu-toggle:checked~.burger-strip-2 div:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked~.burger-strip-2 div:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+    background: var(--primary-yellow);
+}
+
+.burger {
+    position: relative;
+}
+
+#menu-toggle {
+    position: absolute;
+    transform: scale(3);
+    top: 30%;
+    left: 32.5%;
+    opacity: 0;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.nav-menu li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 5px;
+}
+
+.nav-menu {
+    /* margin-top: 50px; */
+    list-style-type: none;
+    padding: 80px 20px;
+    border: 1px solid #333;
+    max-width: 100vw;
+    width: 100vw;
+    background: #000;
+    transition: all 0.3s ease-in;
+    transform: translateX(-100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    height: 100%;
+}
+
+.show-menu {
+    transform: none;
 }

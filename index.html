@@ -25,20 +25,25 @@
 
 <body>
     <!-- Navbar start -->
-    <nav class="navbar navbar-default">
+    <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+
                 <a class="navbar-brand" href="#">
                     <img class="img-fluid" src="./assets/img/logo.svg" />
                 </a>
+                <div class="burger">
+                    <input type="checkbox" id="menu-toggle" />
+                    <div class="strip burger-strip-2">
+
+                        <div></div>
+                        <div></div>
+                        <div></div>
+
+                    </div>
+                </div>
+
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -78,9 +83,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h3 class="cover-subtitle white-text upper-text">
+                        <h4 class="cover-subtitle white-text upper-text">
                             TREAT YOUR WINDOWS WITH
-                        </h3>
+                        </h4>
                         <h1 class="upper-text white-text">
                             STYLISH & MODERN
                         </h1>
@@ -112,7 +117,7 @@
                 </div>
                 <div class="row carousel-row">
                     <div class="col-md-12">
-                        <div class="swiper">
+                        <div class="swiper curtains-slider">
                             <!-- slides -->
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -207,7 +212,7 @@
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                         <!-- pagination -->
-                        <div class="swiper-pagination"></div>
+                        <div class="curtains-pagination swiper-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -230,7 +235,7 @@
                 </div>
                 <div class="row carousel-row">
                     <div class="col-md-12">
-                        <div class="swiper">
+                        <div class="swiper blinds-slider">
                             <!-- slides -->
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -325,7 +330,7 @@
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                         <!-- pagination -->
-                        <div class="swiper-pagination"></div>
+                        <div class="blinds-pagination swiper-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -338,7 +343,7 @@
                 <div class="row title-row">
                     <div class="col-md-6">
                         <h1 class="upper-text white-text text-left underlined">
-                            curtains
+                            Our <span>Projects</span>
                         </h1>
                     </div>
                     <div class="col-md-6">
@@ -626,7 +631,7 @@
                                     </div>
                                 </div>
 
-                                <!--  pagination -->
+                                 <!-- pagination  -->
                                 <div class="testimonial-pagination"></div>
                             </div>
                             <!-- navigation -->
@@ -637,13 +642,13 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
 
         <!-- homepage section 5:end -->
 
         <!-- homepage section 6:start -->
 
-        <section class="faq-section">
+         <section class="faq-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
@@ -887,8 +892,29 @@
         <div class="footer-bg-wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-7 col-md-offset-5">
+                    <div class="col-md-12">
                         <img class="footer-main-img" src="./assets/img/footer-image.svg" alt="">
+                        <div class="mobile-only-text">
+                            <h2>OVER A MILLION</h2>
+                            <h3>BLINDS & curtains <span>INSTALLED</span></h3>
+                            <a role="button" class="btn btn-primary btn-call">
+                                <img src="./assets/img/call-1-icon.svg" />
+                                <div>
+                                    <span class="title">Contact Us</span>
+                                    <span class="contact-no">+971 4 266 2116</span>
+                                </div>
+                            </a>
+
+                            <a role="button" class="btn btn-primary btn-whatsapp">
+                                <img src="./assets/img/whatsapp-color-icon.svg" />
+                                <div>
+                                    <span class="title">Contact Us</span>
+                                    <span class="contact-no">+971 4 266 2116</span>
+                                </div>
+                            </a>
+
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -896,7 +922,7 @@
         <div class="footer-info-wrapper">
             <div class="container">
                 <div class="row footer-info-row">
-                    <div class="col-md-9 col-left">
+                    <div class="col-md-8 col-left">
                         <div class="row-1">
                             <div class="horizontal-icon-box">
                                 <div class="icon">
@@ -932,21 +958,41 @@
                         <div class="row-2">
                             <div class="horizontal-icon-box address-box">
                                 <div class="icon">
-                                    <i class="fas fa-envelope"></i>
+                                    <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div class="icon-box-content">
-                                    <div class="title">EMAIL</div>
+                                    <div class="title">Address</div>
                                     <div class="sub-title">
-                                        <div>BC4-03, 4th floor, AB Center, Sheikh Zayed Road, Al Barsha 01, Dubai, UAE</div>
+                                        <div>BC4-03, 4th floor, AB Center, Sheikh Zayed Road, Al Barsha 01, Dubai, UAE
+                                        </div>
                                         <a href="#">GET DIRECTION<i class="fas fa-angle-double-right"></i></a>
                                     </div>
                                 </div>
                             </div>
+                            <div class="icon-list-wrapper icon-list-wrapper-mobile">
+                                <ul>
+                                    <li>
+                                        <i class="fab fa-facebook-f"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-youtube"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-instagram"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-linkedin"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fab fa-pinterest"></i>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        
-                        
+
+
                     </div>
-                    <div class="col-md-3 col-right">
+                    <div class="col-md-4 col-right">
                         <h4>Join Our <span>Newsletter</span></h4>
                         <div class="newsletter-form-wrapper">
                             <form>
@@ -958,8 +1004,22 @@
                 </div>
             </div>
         </div>
+        <div class="copyiright-row">
+            Copyright © lightnshade 2023 <span></span>Solution by
+            <img src="./assets/img/do-logo.png" />
+            DoMedia
+        </div>
 
     </footer>
+
+    <!-- navbar drawer -->
+    <ul class="nav-menu" id="main-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Info</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    </div>
 
     <script src="./assets/libs/JQuery/jquery-3.7.0.min.js"></script>
     <script src="./assets/libs/Bootstrap/bootstrap.min.js"></script>
