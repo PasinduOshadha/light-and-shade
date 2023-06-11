@@ -1081,6 +1081,10 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     margin-left: 3px;
 }
 
+.footer-section .mobile-only-text{
+    display: none;
+}
+
 /* footer css: end */
 
 
