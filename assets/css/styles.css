@@ -1093,7 +1093,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 
 /* index-1 page html css: start */
 .grid-section {
-    margin-top: 50px;
+    margin-top: 80px;
     margin-bottom: 80px;
 }
 
@@ -1222,6 +1222,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 .job-vacancy-block {
     margin-top: 30px;
     margin-bottom: 60px;
+    padding-top: 120px;
 }
 
 .job-vacancy-block h1 {
@@ -1512,6 +1513,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 
 .product-single-page-content .product-features {
     margin-bottom: 30px;
+    padding-top: 30px;
 }
 
 .product-single-page-content .product-features .feature-list-row .feature-list {
@@ -2103,6 +2105,9 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 
 
     /* carrers page: start */
+    .job-vacancy-block{
+        padding-top: 70px;
+    }
 
     .job-vacancy-block .title-row h1{
         font-size: 30px;
@@ -2170,15 +2175,25 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     /* carrers page: end */
 
     /* careers page: start */
+    .job-info-section{
+        padding-top: 80px;
+    }
+    
     .job-info-section .job-info-title{
         font-size: 30px;
         text-align: center;
     }
-    
-    
-    .job-info-section{
-       padding-top: 40px;
+
+    .job-info-section .job-info-title-hr{
+        min-width: 90vw;
+        max-width: 100vw;
+        width: 100%;
     }
+    
+    
+    /* .job-info-section{
+       padding-top: 40px;
+    } */
     
     .job-info-section .job-info-icon-list{
         flex-direction: row;
@@ -2245,6 +2260,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     /* single product page: end */
 
     /* blinds/categories page: start */
+    
     .grid-section .projects-row .project-item{
         width: calc(50% - 10px) !important;
     }
