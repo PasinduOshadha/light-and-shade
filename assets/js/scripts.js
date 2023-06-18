@@ -1,19 +1,35 @@
 // swiper js
-const curtains_slider_settings = {
+var curtains_slider_settings = {
   speed: 400,
   spaceBetween: 10,
-  slidesPerView: 2,
+  slidesPerView: 4,
   loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
   pagination: {
     el: '.curtains-pagination',
     type: 'bullets',
+    clickable: true 
   },
     autoplay: {
     delay: 2000,
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    }
+  }
 }
 
-const curtains_slider = new Swiper('.curtains-slider', curtains_slider_settings);
+var curtains_slider = new Swiper('.curtains-slider', curtains_slider_settings)
 
 const blinds_slider_settings = {
   speed: 600,
@@ -27,9 +43,20 @@ const blinds_slider_settings = {
     autoplay: {
     delay: 2000,
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    }
+  }
 }
 
-const blinds_slider = new Swiper('.blinds-slider', blinds_slider_settings);
+// const blinds_slider = new Swiper('.blinds-slider', blinds_slider_settings);
 // const swiper = new Swiper('.swiper', {
 //   speed: 400,
 //   spaceBetween: 15,
@@ -70,21 +97,21 @@ const blinds_slider = new Swiper('.blinds-slider', blinds_slider_settings);
 
 // testimonial slider
 const testimonial_slider_settings = {
-  // speed: 400,
-  //spaceBetween: 0,
-  // slidesPerView: 1,
+  speed: 400,
+  spaceBetween: 0,
+  slidesPerView: 1,
   loop: true,
   // centeredSlides: true,
-  pagination: {
-    el: '.testimonial-pagination',
-    type: 'bullets',
-    clickable: true
-  },
-  navigation: {
-    nextEl: '.testimonial-next',
-    prevEl: '.testimonial-prev',
-  },
-  autoplay: false
+  // pagination: {
+  //   el: '.testimonial-pagination',
+  //   type: 'bullets',
+  //   clickable: true
+  // },
+  // navigation: {
+  //   nextEl: '.testimonial-next',
+  //   prevEl: '.testimonial-prev',
+  // },
+  // autoplay: false
   // autoplay: {
   //   delay: 2000,
   //   // enabled: false

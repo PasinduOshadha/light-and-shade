@@ -34,38 +34,44 @@ body{
 }
 
 h1{
-    font-size: 40px;
-    line-height: 45px;
+    font-size: 55px;
+    line-height: 60px;
+
+}
+
+h1.underlined{
+    /* display: inline-block; */
+    position: relative;
+    max-width: fit-content;
+    padding-bottom: 21px;
+}
+
+h1.underlined::after{
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    
 }
 
 h2{
-    font-size: 35px;
-    line-height: 40px;
+    font-size: 45px;
+    line-height: 55px;
 }
 
 h3{
-    font-size: 30px;
+    font-size: 35px;
     line-height: 45px;
 }
 
 h4{
-    font-size: 25px !important;
+    font-size: 30px !important;
 }
 
-h1.underlined{
-    display: inline-block;
-    position: relative;
-}
 
-h1.underlined::after{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 1.8px;
-    width: 100%;
-    background-color: #fff;
-    content: '';
-}
 
 h1 span{
     color: var(--primary-yellow);
@@ -81,15 +87,16 @@ h1 span{
     outline: none;
     box-shadow: none;
     border: none;
-    min-height: 50px;
+    min-height: 60px;
     /* font-family: 'Spartan', sans-serif; */
     line-height: 14px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     letter-spacing: -0.01em;
     text-transform: uppercase;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 7px;
     transition: all ease-in-out 0.35s;
 }
 
@@ -132,3 +139,44 @@ h1 span{
     }
 }
 
+/* container fixes */
+
+@media (min-width: 1366px){
+    section > .container > .row,
+    .footer-section .footer-bg-wrapper .container > .row{
+        margin-left: -60px;
+        margin-right: -60px;
+    }
+}
+
+@media ( min-width:1440px ){
+
+    section > .container > .row,
+    .footer-section .footer-bg-wrapper .container > .row{
+        margin-left: -80px;
+        margin-right: -80px;
+    }
+
+    
+}
+
+@media ( min-width:1600px ){
+
+    section > .container > .row,
+    .footer-section .footer-bg-wrapper .container > .row{
+        margin-left: -160px;
+        margin-right: -160px;
+    }
+
+    
+}
+
+@media ( min-width:1920px ){
+
+    section > .container > .row,
+    .footer-section .footer-bg-wrapper .container > .row{
+        margin-left: -230px;
+        margin-right: -230px;
+    }
+
+}
