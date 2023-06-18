@@ -14,6 +14,7 @@ Generic styles goes here
     margin-bottom: 0;
     transition: all 0.35s ease-in-out;
     z-index: 99;
+    margin-top: 17px;
 }
 
 .navbar .container-fluid {
@@ -40,11 +41,16 @@ Generic styles goes here
 .navbar .navbar-brand {
     margin: 0;
     padding: 0;
-    height: 80px;
+    height: 106px;
+    transition: all 0.35s ease-in-out;
 }
 
 .navbar .navbar-nav>li>a {
     color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-right: 10px;
+    font-weight: 300;
 }
 
 .navbar .navbar-nav>li>a:hover,
@@ -94,6 +100,12 @@ Generic styles goes here
     flex-direction: row;
     column-gap: 5px;
     margin-right: 10px;
+    height: 62px;
+    transition: all 0.25s ease-in-out;
+}
+
+.navbar .cta-btn-wrapper .cta-btn-primary:hover{
+    background-color: var(--primary-yellow);
 }
 
 
@@ -108,15 +120,15 @@ Generic styles goes here
 
 .navbar .cta-btn-wrapper .cta-btn-primary .title,
 .navbar .cta-btn-wrapper .cta-btn-secondary .title {
-    font-size: 9px;
-    line-height: 12px;
+    font-size: 11px;
+    line-height: 16px;
     text-transform: uppercase;
 }
 
 .navbar .cta-btn-wrapper .cta-btn-primary .contact-no,
 .navbar .cta-btn-wrapper .cta-btn-secondary .contact-no {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 22px;
     text-transform: uppercase;
 }
@@ -137,10 +149,21 @@ Generic styles goes here
     flex-direction: row;
     column-gap: 5px;
     margin-right: 20px;
+    transition: all 0.25s ease-in-out;
 }
 
-.navbar .cta-btn-wrapper img {
-    width: 40px;
+.navbar .cta-btn-wrapper .cta-btn-secondary:hover{
+    background-color: #000 !important;
+}
+
+.navbar .cta-btn-wrapper .cta-btn-secondary:hover .title,
+.navbar .cta-btn-wrapper .cta-btn-secondary:hover .contact-no{
+    color: #fff;
+}
+
+.navbar .cta-btn-wrapper .search-icon,
+.navbar .cta-btn-wrapper .burger-icons{
+    width: 62px;
 }
 
 .navbar .cta-btn-wrapper .search-icon {
@@ -149,6 +172,27 @@ Generic styles goes here
 
 .navbar-bg-black {
     background-color: #000;
+    margin-top: 0;
+}
+
+.navbar-bg-black .navbar-brand{
+    height: 80px;
+}
+
+.main-wrapper{
+    position: relative;
+}
+
+.main-wrapper::before{
+    background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 88%);
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 15vh;
+    content: '';
+    z-index: 1;
 }
 
 /* Homepage section 1 css : start */
@@ -178,14 +222,15 @@ Generic styles goes here
     height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     z-index: 2;
+    padding-bottom: 120px;
 }
 
 .homepage-cover .cover-subtitle {
     font-weight: 400;
-    font-size: 30px;
+    font-size: 30px !important;
     line-height: 40px;
     letter-spacing: -0.01em;
 }
@@ -196,14 +241,61 @@ Generic styles goes here
     max-width: 100%;
 }
 
+.homepage-cover h1{
+    font-size: 55px;
+    line-height: 45px;
+    margin-bottom: 10px;
+}
+
 .homepage-cover h4 {
     font-weight: 200 !important;
 }
 
-.homepage-cover h1,
-h2,
-h3 {
-    margin-top: 0;
+.homepage-cover .cover-services-boxes{
+    display: flex;
+    margin-bottom: 39px;
+    margin-top: 20px;
+}
+.homepage-cover .cover-services-boxes a{
+    min-width: 194px;
+    min-height: 154px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 45px;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+}
+
+.homepage-cover .cover-services-boxes a:hover{
+    background-color: #222;
+}
+
+.homepage-cover .cover-services-boxes a:nth-child(2n){
+    background-color: #161616;
+}
+
+.homepage-cover .cover-services-boxes a:nth-child(2n):hover{
+    background-color: #2a2a2a;
+}
+.homepage-cover .cover-services-boxes a div{
+    color: #fff;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.homepage-cover .cover-services-boxes a img{
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.homepage-cover .title-underline{
+    height: 2px;
+    width: fit-content;
+    background-color: #fff;
 }
 
 /* Homepage section 1 css : end */
@@ -241,6 +333,11 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     line-height: 31px;
     letter-spacing: -0.01em;
     text-align: left;
+    text-decoration: none;
+}
+
+.carousel-block .col-md-6 .view-more-link:hover{
+    color: #fff !important;
 }
 
 .carousel-block .carousel-row .swiper-slide .item-body {
@@ -252,10 +349,12 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 
 .carousel-block .carousel-row .swiper-slide .item-body .item-content {
     width: 80%;
+    padding-left: 10px;
 }
 
 .carousel-block .carousel-row .swiper-slide .item-body .item-content h5 {
-    font-size: 22px;
+    font-size: 30px;
+    font-weight: 600;
     color: #000;
     margin-bottom: 0;
 }
@@ -263,21 +362,29 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 .carousel-block .carousel-row .swiper-slide .item-body .item-content small {
     font-size: 18px;
     line-height: 28px;
+    font-weight: 600;
 }
 
 .carousel-block .carousel-row .swiper-slide .item-body .item-content>div {
-    font-size: 22px;
+    font-size: 26px;
     line-height: 27px;
     font-weight: 600;
 }
 
 .carousel-block .carousel-row .swiper-slide .item-body .readmore-link {
     width: 20%;
-    text-align: center;
+    text-align: right;
+    padding-right: 15px;
 }
 
 .carousel-block .carousel-row .swiper-slide .item-body .readmore-link a {
     color: #000;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.carousel-block .carousel-row .swiper-slide .item-body .readmore-link a .fas{
+    font-weight: 500;
 }
 
 .carousel-block .carousel-row .swiper-slide {
@@ -290,6 +397,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 
 .carousel-block .carousel-row .swiper-slide img {
     max-width: 100%;
+    margin-bottom: 19px;
 }
 
 .carousel-block .carousel-row .swiper-button-prev::after,
@@ -328,9 +436,35 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     ;
 }
 
+/* blinds section */
+
+.blinds-section{
+    background-color: #0B0B0B;
+    height: 100vh;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blinds-section.carousel-block .carousel-row .swiper-slide .item-body .item-content{
+    margin-bottom: 15px;
+}
+
+.blinds-section.carousel-block .carousel-row .swiper-slide .item-body .item-content>div{
+    margin-top: 5px;
+}
+
+/* Homepage corousel block css : end */
+
 /* Homepage tabs block (section 3) css : start */
 .tabs-block {
     margin-bottom: 80px;
+    height: 90vh;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .tabs-block .tab-pills-wrapper .panel-default>.panel-heading {
@@ -361,6 +495,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 .tabs-block .tab-pills-wrapper ul li a {
     color: #4B4B4B !important;
     border: none !important;
+    font-size: 21px;
 }
 
 .tabs-block .tab-pills-wrapper ul li.active a {
@@ -373,6 +508,10 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 /* .tabs-block .tab-pills-wrapper ul li.active a{
     background: red;
 } */
+
+.tabs-block h1.underlined::after{
+    width: 310px;
+}
 
 .tabs-block .panel {
     margin-bottom: 0;
@@ -400,7 +539,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 }
 
 .tabs-block .tab-panel-wrapper {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .tabs-block .panel-body {
@@ -441,12 +580,13 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 }
 
 .tabs-block .projects-row .project-item .item-content {
-    width: 80%;
+    width: 90%;
+    padding-left: 5px;
 }
 
 .tabs-block .projects-row .project-item .project-title {
     color: #000;
-    font-size: 18px;
+    font-size: 31px;
     font-weight: 600;
     line-height: 1em;
     letter-spacing: 0.01em;
@@ -456,16 +596,23 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 
 .tabs-block .projects-row .project-item .item-body .readmore-link {
     width: 10%;
-    text-align: center;
+    text-align: right;
+    padding-right: 15px;
 }
 
 .tabs-block .projects-row .project-item .item-body .readmore-link a {
     color: #000;
+    /* font-size: 21px; */
+}
+
+.tabs-block .projects-row .project-item .item-body .readmore-link a .fas{
+    font-size: 31px;
+    font-weight: 500;
 }
 
 .tabs-block .projects-row .project-item .project-location {
     color: var(--primary-yellow);
-    font-size: 14px;
+    font-size: 26px;
     font-weight: 600;
     letter-spacing: 0.01em;
 }
@@ -481,10 +628,45 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 /* testimonial css : start */
 .testimonial-block {
     margin-bottom: 80px;
+    background-color: #0B0B0B;
+    height: 100vh;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.testimonial-block .testimonial-block-title{
+    margin-bottom: 60px;
+    color: #fff;
+        position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.testimonial-block .testimonial-block-title::after{
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: -21px;
+    height: 2px;
+    background-color: #fff;
+    width: 250px;
+    content: '';
+}
+
+.testimonial-block .testimonial-block-title span{
+    color: var(--primary-yellow)
+}
+
+.testimonial-block .testimonial-slider-container{
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .testimonial-block .testimonial-slider {
-    max-width: 800px;
+    /* max-width: 800px; */
     border-radius: 15px;
     overflow-x: hidden;
 }
@@ -538,27 +720,28 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 .testimonial-block .testimonial-slider .testimonial-item .image-wrapper img {
     max-width: 100%;
     height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
 .testimonial-block .testimonial-slider .testimonial-item .content-wrapper {
     width: 60%;
     text-align: center;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
     background-color: #fff;
 }
 
 .testimonial-block .testimonial-slider .testimonial-item .content-wrapper .user-icon {
     border: 3px solid var(--primary-yellow);
     border-radius: 100px;
-    width: 60px;
-    margin-top: 30px;
+    width: 97px;
+    margin-top: 65px;
     margin-bottom: 20px;
 }
 
 .testimonial-block .testimonial-slider .testimonial-item .content-wrapper .name {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 16px;
     letter-spacing: -0.01em;
@@ -569,17 +752,20 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 .testimonial-block .testimonial-slider .testimonial-item .content-wrapper .designation {
     color: #292929;
     margin-bottom: 7px;
+    font-size: 25px;
 }
 
 .testimonial-block .testimonial-slider .testimonial-item .content-wrapper .rating {
-    height: 20px;
+    height: 30px;
     margin-bottom: 15px;
 }
 
 .testimonial-block .testimonial-slider .testimonial-item .content-wrapper .testimonial-content {
     color: #000;
-    font-size: 14px;
+    font-size: 20px;
+    line-height: 29px;
     font-weight: 300;
+    margin-bottom: 80px;
 }
 
 .testimonial-block .testimonial-pagination {
@@ -605,9 +791,11 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 .faq-section {
     background: url('../img/window-blinds-couch.png');
     background-position: center right;
-    background-size: 40%;
+    background-size: 35%;
     background-repeat: no-repeat;
     margin-bottom: 80px;
+    height: 70vh;
+    min-height: 600px;
 }
 
 .faq-section .panel {
@@ -623,6 +811,19 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     color: #fff;
     text-transform: uppercase;
     max-width: 610px;
+    position: relative;
+    margin-bottom: 41px;
+}
+
+.faq-section .faq-block-title::after{
+position: absolute;
+left: 0;
+bottom: -1px;
+height: 1px;
+width: 320px;
+background-color: #fff;
+content: '';
+
 }
 
 .faq-section .faq-block-title span {
@@ -644,30 +845,31 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 
 .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a {
     color: #fff;
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 32px;
     text-decoration: none;
 }
 
 .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a.collapsed {
     color: #CFD3D7;
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 32px;
     text-decoration: none;
-    position: absolute;
+    /* position: absolute; */
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
     z-index: 2;
-    padding-top: 20px;
-    padding-left: 15px;
+    font-weight: 600;
+    /* padding-top: 20px; */
+    /* padding-left: 15px; */
 }
 
 .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a::after {
     position: absolute;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     background-color: red;
     top: 50%;
     transform: translateY(-50%);
@@ -678,6 +880,10 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    transition: all 0.15s ease-in-out;
+}
+.faq-section .faq-block-wrapper{
+    margin-right: 80px;
 }
 
 .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a.collapsed::after {
@@ -690,9 +896,13 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 .faq-section .faq-block-wrapper .faq-block .panel-body {
     border: none;
     color: #CFD3D7;
-    font-size: 13px;
+    font-size: 21px;
     font-weight: 300;
-    line-height: 1.6em;
+    line-height: 1.7em;
+    padding: 20px;
+}
+.faq-section .faq-block-title{
+    font-weight: 600;
 }
 
 /* FAQ block css: end */
@@ -700,7 +910,12 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 /* Blog section css: start */
 
 .blog-block {
-    margin-bottom: 80px;
+    background-color: #0B0B0B;
+    min-height: 80vh;
+    /* min-height: 860px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
 }
 
 .blog-block .blog-wrapper {
@@ -710,11 +925,16 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     grid-column-gap: 15px;
     grid-row-gap: 15px;
     margin-bottom: 50px;
+    width: 80%;
+    min-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .blog-block .blog-wrapper .blog-post {
     background-color: #191919;
     display: flex;
+    position: relative;
 }
 
 .blog-block .blog-wrapper .blog-post .post-loop-content {
@@ -725,11 +945,37 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     flex-direction: column;
 }
 
+.blog-block .blog-wrapper .blog-post .first-post-date{
+    position: absolute;
+    background: #464646;
+    border-radius: 4.12px;
+    padding: 10px;
+    right: 11px;
+    top: 11px;
+}
+
+.blog-block .blog-wrapper .blog-post .first-post-date .day{
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    
+}
+
+.blog-block .blog-wrapper .blog-post .first-post-date .month{
+    font-weight: 500;
+font-size: 14px;
+text-transform: uppercase;
+color: #FFFFFF;
+    text-align: center;
+}
+
 .blog-block .blog-wrapper .post-1 {
     grid-area: 1 / 1 / 7 / 5;
     overflow: hidden;
     flex-direction: column;
     border-radius: 7.76px;
+    position: relative
 }
 
 .blog-block .blog-wrapper .post-1 img {
@@ -793,11 +1039,10 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 
 .blog-block .blog-section-title {
     font-size: 55px;
-    ;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     border-bottom: 1px solid #fff;
     width: fit-content;
     margin-left: auto;
@@ -811,11 +1056,179 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 
 /* Blog section css: end */
 
+/* about us section css: start */
+
+.about-us-block{
+    height: 100vh;
+    min-height: 860px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url('../img/about-us-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-us-block .title-row{
+    text-align: center;
+}
+
+.about-us-block .title-row .about-us-block-title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.about-us-block .title-row .about-us-block-title.underlined{
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.about-us-block .title-row .about-us-block-title.underlined:after{
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: -21px;
+    height: 2px;
+    width: 150px;
+    background-color: #fff;
+    
+}
+
+.about-us-block .title-row .about-us-block-title span{
+    color: var(--primary-yellow);
+}
+
+.about-us-block .about-us-info-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 50px;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-us-block .about-us-info-wrapper .left-col{
+    width: 71%;
+    color: #fff;
+    font-size: 22px;
+    line-height: 29px;
+    text-align: right;
+    position: relative; 
+}
+
+.about-us-block .about-us-info-wrapper .left-col::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    top:0;
+    right: -3.5%;
+    background-color: #fff;
+    
+}
+
+.about-us-block .about-us-info-wrapper .left-col p{
+    margin-bottom: 30px;
+}
+
+.about-us-block .about-us-info-wrapper .right-col .line-1{
+    font-size: 95px;
+    line-height: 95px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10;
+}
+
+.about-us-block .about-us-info-wrapper .right-col .line-2{
+    background: #D59117;
+    color: #fff;
+    font-size: 48px;
+    border-radius: 5px;
+    font-weight: 600;
+    padding-top: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-us-block .about-us-info-wrapper .right-col .line-3{
+    color: #fff;
+    font-size: 76px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 76px;
+    margin-bottom: 0;
+}
+
+.about-us-block .about-us-info-wrapper .right-col .line-4{
+    color: #fff;
+    font-size: 44px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.about-us-block .about-us-info-wrapper .right-col .line-5{
+    color: #fff;
+    font-size: 51px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.about-us-block .info-row{
+    margin-bottom: 30px;
+}
+
+.about-us-block .card-row .card-item{
+    background: rgba(255, 255, 255, 0.13);
+    border-radius: 6px;
+    width: calc(33.33% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 1% 4% 1% 5%;
+}
+
+.about-us-block .card-row .card-item h4{
+    color: #fff;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 42px;
+    letter-spacing: -0.01em;
+color: #FFFFFF;
+    position: relative;
+}
+
+.about-us-block .card-row .card-item h4::before{
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 100%;
+    background-color: var(--primary-yellow);
+    left: -9%;
+    top: 0;
+    
+}
+
+.about-us-block .card-row{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* about us section css: end */
+
 /* logo slider css: start */
 .logo-slider-block {
     /* margin-bottom: 80px; */
     background-color: #D0D0D0;
-    padding-bottom: 80px;
+    padding-bottom: 120px;
     padding-top: 20px;
 }
 
@@ -853,6 +1266,86 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 /* footer css: start */
 .footer-section {
     position: relative;
+}
+
+.footer-section .footer-main-content{
+    width: 670px;
+    margin-left: auto;
+    margin-bottom: 120px;
+    margin-top: 80px;
+    position: relative;
+    margin-right: 5vw;;
+}
+
+.footer-section .footer-main-content .content-text .line-1{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 60px;
+}
+
+.footer-section .footer-main-content .content-text .line-2{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 57px;
+}
+
+.footer-section .footer-main-content .content-text .line-2 span{
+    color: var(--primary-yellow);
+    font-weight: 700;
+}
+
+.footer-section .footer-main-content .cta-btn-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.footer-section .footer-main-content .cta-btn-wrapper .btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between !important;
+    column-gap: 10px;
+    border-radius: 50px;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 20px;
+    background-color: transparent;
+    border: 1px solid #828282;
+    margin-left: 10px;
+    transition: all 0.25s ease-in-out 
+}
+
+.footer-section .footer-main-content .cta-btn-wrapper .btn.btn-call:hover{
+    background-color: var(--primary-yellow);
+}
+
+.footer-section .footer-main-content .cta-btn-wrapper .btn.btn-whatsapp:hover{
+    background-color: #46bf61;
+}
+
+.footer-section .footer-main-content .cta-btn-wrapper .btn .title{
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.footer-section .footer-main-content .cta-btn-wrapper .btn .contact-no{
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.footer-section .footer-main-content .cta-btn-wrapper .btn div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start
+}
+
+.footer-section .footer-main-content .cta-btn-wrapper .btn img{
+    width: 50px;
+    margin-right: 0px;
 }
 
 .footer-section .bg-row {
@@ -920,8 +1413,8 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 .footer-section .footer-info-wrapper .horizontal-icon-box .icon {
     background-color: #2E2E2E;
     border-radius: 50px;
-    height: 35px;
-    width: 35px;
+    height: 56px;
+    width: 56px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -929,7 +1422,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 }
 
 .footer-section .footer-info-wrapper .horizontal-icon-box .icon .fas {
-    font-size: 14px;
+    font-size: 24px;
     color: #fff;
 }
 
@@ -948,7 +1441,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 .footer-section .footer-info-wrapper .horizontal-icon-box .title {
     color: #fff;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 14px;
 }
 
 .footer-section .footer-info-wrapper .horizontal-icon-box .sub-title div {
@@ -959,7 +1452,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     color: #fff;
     text-transform: lowercase;
     font-weight: 600;
-    font-size: 14px !important;
+    font-size: 22px !important;
 }
 
 .footer-section .footer-info-wrapper .icon-list-wrapper ul {
@@ -971,8 +1464,8 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 .footer-section .footer-info-wrapper .icon-list-wrapper ul li {
     background-color: #2E2E2E;
     border-radius: 50px;
-    height: 35px;
-    width: 35px;
+    height: 56px;
+    width: 56px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -981,7 +1474,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 }
 
 .footer-section .footer-info-wrapper .icon-list-wrapper ul li .fab {
-    font-size: 16px;
+    font-size: 22px;
     color: #fff;
 }
 
@@ -989,12 +1482,13 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 .footer-section .footer-info-wrapper .horizontal-icon-box.address-box .sub-title div {
     color: #fff;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .footer-section .footer-info-wrapper .horizontal-icon-box.address-box .sub-title a {
     color: var(--primary-yellow);
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 28px;
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -1023,7 +1517,8 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 
 .footer-section .col-right h4 {
     color: #fff;
-    font-size: 18px !important;
+    font-size: 30px !important;
+    line-height: 41px;
     text-transform: uppercase;
     text-align: right;
 }
@@ -1044,8 +1539,11 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     padding-left: 15px;
     margin-right: 0;
     background: rgba(148, 148, 148, 0.1);
-    width: 190px;
     margin-left: auto;
+    color: #fff;
+    height: 60px;
+    min-width: 200px;
+    width: 330px;
 }
 
 .footer-section .col-right form {
@@ -1055,12 +1553,12 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 }
 
 .footer-section .col-right form .btn {
-    height: 40px;
+    height: 60px;
     margin-left: 0;
     border-radius: 0;
     background: var(--primary-yellow);
     border: none;
-    width: 50px;
+    width: 65px;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
@@ -1086,6 +1584,20 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 
 .footer-section .mobile-only-text{
     display: none;
+}
+
+
+.footer-section .footer-main-content::before{
+    content: '';
+    position: absolute;
+    height: 550px;
+    width: 350px;
+    left: -160px;
+    top: -80px;
+    background: url('../img/footer-main-element.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 /* footer css: end */
@@ -1698,596 +2210,6 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 }
 
 /* Product single page: end */
-
-/* mobile styles */
-@media (max-width: 480px) {
-    .burger{
-        display: flex !important;
-    }
-    .navbar {
-        max-width: 100vw;
-    }
-
-    .navbar .cta-btn-primary {
-        display: none !important;
-    }
-
-    .navbar .navbar-brand {
-        height: 60px;
-    }
-
-    .navbar .navbar-header {
-        width: 100%;
-        max-width: 100vw;
-        ;
-    }
-
-    .navbar .cta-btn-wrapper {
-        display: none !important;
-    }
-
-    .navbar .navbar-collapse {
-        display: none !important;
-    }
-
-    .carousel-block .carousel-row .swiper-slide .item-body .item-content h5 {
-        font-size: 14px;
-        font-weight: 500;
-        margin-bottom: 5px;
-    }
-
-    .carousel-block .carousel-row .swiper-slide {
-        padding: 5px;
-        border-radius: 7px;
-    }
-
-    .carousel-block .carousel-row .swiper-slide .item-body .item-content small {
-        font-size: 14px;
-        line-height: 16px;
-    }
-
-    .carousel-block .carousel-row .swiper-slide .item-body .item-content>div {
-        font-size: 14px;
-        line-height: 18px;
-    }
-
-    .carousel-block .carousel-row .swiper-button-next,
-    .carousel-block .carousel-row .swiper-button-prev {
-        display: none;
-    }
-
-    .carousel-block .carousel-row .swiper-pagination-bullet {
-        height: 10px;
-        width: 10px;
-    }
-
-    /* projects section:start */
-    .tabs-block .title-row>div {
-        text-align: center;
-    }
-
-    .tabs-block .title-row>div h1 {
-        margin-bottom: 30px;
-    }
-
-    .tabs-block .tab-pills-wrapper .panel-default .nav-tabs {
-        flex-direction: row;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        border-bottom: 1px solid #4D4D4D !important;
-        flex-direction: row;
-        padding-bottom: 10px !important;
-        column-gap: 0px !important;
-        font-size: 12px;
-    }
-
-    .tabs-block .projects-row.row {
-        flex-wrap: wrap;
-        row-gap: 10px;
-        justify-content: center;
-    }
-
-    .tabs-block .projects-row.row::before,
-    .tabs-block .projects-row.row::after {
-        display: none;
-    }
-
-    .tabs-block .projects-row.row .project-item {
-        width: calc(50% - 20px) !important;
-    }
-
-    .testimonial-block .testimonial-slider .testimonial-item {
-        flex-direction: column !important;
-    }
-
-    .testimonial-block .testimonial-prev,
-    .testimonial-block .testimonial-next {
-        display: none;
-    }
-
-    .testimonial-block .testimonial-slider .testimonial-item .image-wrapper {
-        width: 100% !important;
-        height: 200px;
-    }
-
-    .testimonial-block .testimonial-slider .testimonial-item .image-wrapper img {
-        width: 100%;
-    }
-
-    .testimonial-block .testimonial-slider .testimonial-item .content-wrapper {
-        width: 100% !important;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        padding-bottom: 30px;
-    }
-
-    .testimonial-block .testimonial-slider .testimonial-item .content-wrapper .user-icon {
-        width: 100px;
-        margin-top: -50px;
-    }
-
-
-    /* Faq section: start */
-
-
-    .faq-section .faq-block-title {
-        font-size: 30px;
-        line-height: 40px;
-        text-align: center;
-    }
-
-    .faq-section {
-        background: inherit;
-    }
-
-    .faq-section .faq-block-wrapper .faq-block .panel-heading {
-        min-height: 50px;
-
-    }
-
-    .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a {
-        width: 91%;
-        padding-right: 20px !important;
-        padding-left: 10px;
-        display: inline-block;
-        line-height: 1.5em;
-    }
-
-    .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title .target-title {
-        width: 95%;
-    }
-
-    .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title .target-title::after {
-        top: 50%;
-        right: 30px;
-    }
-
-    .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title .collapsed.target-title::after {
-        top: 37%;
-        right: 0px;
-    }
-
-
-    .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a.collapsed {
-        position: relative;
-        padding-top: 0px;
-        padding-right: 15px;
-        width: 95%;
-        line-height: 1.5em;
-    }
-
-    .faq-section .faq-block-wrapper .faq-block .panel-body {
-        width: 95%;
-        padding-left: 20px
-    }
-
-    /* FAQ section:end */
-
-    /* blog-section:start */
-    .blog-block .blog-section-title {
-        font-size: 30px;
-    }
-
-    .blog-block .blog-wrapper {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .blog-block .blog-wrapper .post-1,
-    .blog-block .blog-wrapper .post-2 {
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 15px;
-        border-radius: 15px;
-    }
-
-    .blog-block .blog-wrapper .blog-post .date {
-        display: none;
-    }
-
-    .blog-block .blog-wrapper .post-2 img {
-        width: 100%;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-    }
-
-
-    .blog-block .blog-wrapper .post-3,
-    .blog-block .blog-wrapper .post-4 {
-        display: none;
-    }
-
-    .blog-block .blog-wrapper .blog-post .post-title {
-        font-size: 20px;
-        line-height: 25px;
-    }
-
-    /* blog-section:end */
-
-    /* Logo slider section:start */
-    .logo-slider-block .logo-slider-section-title {
-        font-size: 30px;
-    }
-
-    .logo-slider-block .logo-slider-section-title::after {
-        bottom: 0;
-    }
-
-    .logo-slider-block {
-        padding-bottom: 60px
-    }
-
-    /* Logo slider section:end */
-
-    /* footer section: start */
-    .footer-section .google-review-widget img{
-        width: 180px;
-        transform: translateY(-0px);
-        z-index: 99;
-    }
-    
-    .footer-section .google-review-widget{
-        transform: translateY(-40px);
-        z-index: 99;
-    }
-    
-    .footer-section .footer-main-img{
-        display: none;
-    }
-    
-    .footer-section .col-md-7{
-        text-align: center;
-    }
-    
-    .footer-section .mobile-only-text{
-         display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 30px;
-        margin-top: 250px;
-    }
-    
-    .footer-section .mobile-only-text h2{
-        font-size: 35px;
-        font-weight: 600;
-        color: #fff;
-        line-height: 35px;
-        margin-bottom: 5px;
-        text-align: center;
-    }
-    
-    .footer-section .mobile-only-text h3{
-        margin-top: 0;
-        max-width: 300px;
-        line-height: 35px;
-        text-transform: uppercase;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-    
-    .footer-section .mobile-only-text h3 span{
-        color: #fff !important;
-    }
-    
-    .footer-section .mobile-only-text .btn{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        align-content: center;
-        column-gap: 10px;
-        min-width: 180px;
-        align-self: center;
-        width: fit-content;
-        margin-bottom: 10px;
-        border-radius: 50px;
-        background-color: #000;
-        border-color: #828282;
-        padding-right: 20px;
-        padding-left: 5px;
-        padding-top: 7px;
-        padding-bottom: 7px;
-    }
-    
-    .footer-section .mobile-only-text .btn > div{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        text-align: left;
-    }
-    
-    .footer-section .mobile-only-text .btn > img{
-        width: 50px;
-    }
-    .footer-section .mobile-only-text .btn > div .title{
-        font-size: 14px;
-    }
-    
-    .footer-section .mobile-only-text .btn > div .contact-no{
-        font-weight: 600;
-        font-size: 20px
-    }
-    
-    .footer-section .footer-info-row{
-        display: flex;
-        flex-direction: column-reverse;
-    
-    }
-    
-    .footer-section .footer-info-row .col-right{
-        margin-bottom: 30px !important;
-        background: #1A1A1A;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-    
-    .footer-section .footer-info-row .col-right h4{
-        text-align: center;
-    }
-    
-    .footer-section .footer-info-row .col-right form{
-        justify-content: center !important;
-            
-    }
-    
-    .footer-section .footer-info-row .col-right form input[type=email]{
-        margin-left: inherit;
-    }
-    
-    .footer-bg-wrapper::before{
-        background: url('../img/peeping-through-window-mobile.png');
-        background-size: contain;
-        background-position: top;
-        background-repeat: no-repeat;
-        z-index: -2;
-    }
-    
-    .footer-bg-wrapper::after{
-    background: rgb(0,0,0);
-    background:linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,1) 75%);
-        z-index: -1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 50%;
-        content: '';
-    }
-
-    .footer-section .icon-list-wrapper{
-        display: none;
-    }
-    
-    .footer-section .icon-list-wrapper-mobile{
-        display: flex !important;
-    }
-    
-    .address-box .icon-box-content{
-        width: 85%;
-    }
-    
-    .footer-section .footer-info-wrapper{
-        padding-bottom: 10px;
-    }
-    
-    .footer-section .copyiright-row{
-        padding-right: 50px;
-        padding-left: 50px;
-    }
-    
-    .footer-section .copyiright-row span{
-        display: none;
-    }
-    /* footer section: end */
-
-
-    /* carrers page: start */
-    .job-vacancy-block{
-        padding-top: 70px;
-    }
-
-    .job-vacancy-block .title-row h1{
-        font-size: 30px;
-        max-width: 250px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .job-vacancy-block .title-row h1 span{
-        color: var(--primary-yellow)
-    }
-    
-    .job-vacancy-block .panel .nav-tabs{
-        overflow-x: scroll;
-        width: 100%;
-        padding-bottom: 10px;
-        justify-content: flex-start;
-    }
-    
-    .job-vacancy-block .panel .nav-tabs::-webkit-scrollbar{
-        background-color: transparent;
-        width:1px;
-    }
-    
-    .job-vacancy-block .panel .nav-tabs li a{
-        white-space: nowrap;
-    }
-    
-    .job-vacancy-block .panel .nav-tabs::-webkit-scrollbar-thumb{
-      background-color: #000;
-      border-radius: 0px; 
-        width:1px;
-    }
-    
-    .job-vacancy-block .panel .nav-tabs::-webkit-scrollbar-track{
-      background-color: transparent; 
-        width:1px;
-    }
-    
-    .job-vacancy-block .panel-body{
-        padding-top: 0px;
-    }
-    
-    .job-vacancy-block .category-tabs .job-post{
-        width: calc(100% - 0px);
-        display: flex;
-        flex-direction: column;
-        padding-top: 10px !important;
-    }
-    
-    
-    .job-vacancy-block .category-tabs .job-post .type{
-        order:-1;
-        display: block;
-        margin-top: 20px;
-        align-self: flex-start;
-    }
-    
-    .job-vacancy-block .category-tabs .job-post h3{
-        margin-bottom: 0px;
-        margin-top: 10px;
-        line-height: 18px;
-    }
-
-    /* carrers page: end */
-
-    /* careers page: start */
-    .job-info-section{
-        padding-top: 80px;
-    }
-    
-    .job-info-section .job-info-title{
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .job-info-section .job-info-title-hr{
-        min-width: 90vw;
-        max-width: 100vw;
-        width: 100%;
-    }
-    
-    
-    /* .job-info-section{
-       padding-top: 40px;
-    } */
-    
-    .job-info-section .job-info-icon-list{
-        flex-direction: row;
-        flex-wrap: wrap;
-        row-gap: 10px;
-        text-align: center;
-        font-size: 16px;
-    }
-    
-    .job-info-section .job-info-icon-list .job-info-icon-list-item{
-        width: calc(50% - 15px);
-    }
-    
-    .job-info-section .job-info-icon-list .job-info-icon-list-item:nth-child(2){
-        text-align:  left;
-    }
-    
-    .job-info-section .job-info-icon-list .job-info-icon-list-item:nth-child(1){
-        text-align:  right;
-    }
-    
-    .job-info-section .job-info-icon-list .job-info-icon-list-item:nth-child(3){
-        width: 100%;  
-        font-size: 20px;
-        font-weight: 600;
-    }
-    
-    .job-info-section .job-info-description{
-        text-align: center;
-    }
-    
-    .job-info-section .job-info-tasks,
-    .job-info-section .job-info-requirements{
-        display: none;
-    }
-    /* carresrs page: end */
-
-    /* single product page: start */
-    .product-single-page-content .product-page-cover .container .product-brief h1{
-        font-size: 30px;
-    }
-    
-    .product-single-page-content .product-page-cta-btn-wrapper .product-page-btn-360{
-        display: none;
-    }
-    
-    .product-single-page-content .product-page-short-discription{
-        max-width: 90vw;
-        min-width: 200px;
-        width: 100%
-    }
-
-    .product-single-page-content .product-features .feature-list-row .feature-list{
-        flex-direction: column;
-        padding-left: 20px;
-    }
-    
-    .product-single-page-content .feature-list .feature-list-item{
-        width: 100%;
-    }
-    .product-single-page-content .product-features .feature-list-row{
-        margin-bottom: 10px;
-    }
-    /* single product page: end */
-
-    /* blinds/categories page: start */
-    
-    .grid-section .projects-row .project-item{
-        width: calc(50% - 10px) !important;
-    }
-    
-    .grid-section .projects-row.row{
-        flex-wrap: wrap;
-        row-gap: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
-    .grid-section .projects-row.row::before,
-    .grid-section .projects-row.row::after{
-       display: none; 
-    }
-    
-    .grid-section h1{
-        margin-bottom: 25px;
-    }
-    /* blinds/categories page: end */
-
-    /* projects section:end */
-
-    /* homepage */
-    /* curtains-section  */
-    /* .carousel-block .carousel-row .swiper-slide .item-link */
-}
 
 
 /* nav menu */
