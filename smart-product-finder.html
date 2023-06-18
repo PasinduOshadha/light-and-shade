@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Product Finder</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- boostrap -->
+    <link href="./assets/libs/Bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- font awesome 5 -->
+    <link rel="stylesheet" href="./assets/libs/Font-Awesome-5/css/all.min.css">
+
+    <!-- spartan font -->
+    <link href="https://fonts.cdnfonts.com/css/spartan" rel="stylesheet">
+
+    <!-- swiperjS css -->
+    <link rel="stylesheet" href="./assets/libs/Swiper-js/swiper-bundle.min.css">
+
+    <!-- styel css -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/mobile-styles.css">
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <!-- Navbar start -->
+        <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" href="#">
+                        <img class="img-fluid" src="./assets/img/logo.svg" />
+                    </a>
+                    <div class="burger">
+                        <input type="checkbox" id="menu-toggle" />
+                        <div class="strip burger-strip-2">
+
+                            <div></div>
+                            <div></div>
+                            <div></div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Projects</a></li>
+                    </ul>
+                    <div class="cta-btn-wrapper">
+                        <a role="button" class="btn btn-primary cta-btn-primary">
+                            <img src="./assets/img/call-1-icon.svg" />
+                            <div>
+                                <span class="title">Contact Us</span>
+                                <span class="contact-no">+971 4 266 2116</span>
+                            </div>
+                        </a>
+                        <a role="button" class="btn btn-primary cta-btn-secondary">
+                            <img src="./assets/img/calender-icon.svg" />
+                            <div>
+                                <span class="title">schedule AN</span>
+                                <span class="contact-no">appointment </span>
+                            </div>
+                        </a>
+                        <img class="search-icon" src="./assets/img/mag-icon.svg" />
+                        <img class="burger-icons" src="./assets/img/burger-icon.svg" />
+                    </div>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <!-- Navbar end -->
+
+        <section class="product-finder">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="step-wrapper">
+
+                        </div>
+                        <div class="form-wrapper">
+                            <form>
+                                <div class="step-1 step show">
+                                    <div class="question underlined">
+                                        WHAT DO YOU LOOKING FOR
+                                    </div>
+                                    <div class="ans-wrapper">
+                                        <div class="ans-item">
+                                            <input type="radio" name="lookingFor" id="lookingFor1" value="residential"
+                                                class="radio-ans-item" aria-invalid="false">
+                                            <label for="lookingFor1">
+                                                <img src="./assets/img/form-answers/res.svg" alt="">
+                                                <div>Residential</div>
+                                            </label>
+                                        </div>
+                                        <div class="ans-item">
+                                            <input type="radio" name="lookingFor" id="lookingFor2" value="commercial"
+                                                class="radio-ans-item" aria-invalid="false">
+                                            <label for="lookingFor2">
+                                                <img src="./assets/img/form-answers/com.svg" alt="">
+                                                <div>Commercial</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-2 step">
+                                    <div class="question underlined">
+                                        CHOOSE YOUR UNIT
+                                    </div>
+                                    <div class="ans-wrapper">
+                                        <div class="ans-item">
+                                            <input type="radio" name="unit" id="unit-outdoor" value="outdoor"
+                                                class="radio-ans-item" aria-invalid="false">
+                                            <label for="unit-outdoor">
+                                                <img src="./assets/img/form-answers/outdoor.svg" alt="">
+                                                <div>Ourdoor</div>
+                                            </label>
+                                        </div>
+                                        <div class="ans-item">
+                                            <input type="radio" name="unit" id="unit-indoor" value="indoor"
+                                                class="radio-ans-item" aria-invalid="false">
+                                            <label for="unit-indoor">
+                                                <img src="./assets/img/form-answers/indoor.svg" alt="">
+                                                <div>Indoor</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-3 step">
+                                    <div class="question underlined">
+                                        CHOOSE OPAQUE EFFECT
+                                    </div>
+                                    <div class="ans-wrapper">
+                                        <div class="ans-item">
+                                            <input type="radio" name="opaque-effect" id="opaque-effect-full-dark"
+                                                value="full-dark" class="radio-ans-item" aria-invalid="false">
+                                            <label for="opaque-effect-full-dark">
+                                                <img src="./assets/img/form-answers/full-dark.svg" alt="">
+                                                <div>Full Dark</div>
+                                            </label>
+                                        </div>
+                                        <div class="ans-item">
+                                            <input type="radio" name="opaque-effect" id="opaque-effect-semi-dark"
+                                                value="semi-dark" class="radio-ans-item" aria-invalid="false">
+                                            <label for="opaque-effect-semi-dark">
+                                                <img src="./assets/img/form-answers/semi-dark.png" alt="">
+                                                <div>Semi Dark</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-4 step">
+                                    <div class="question underlined">
+                                        CHOOSE YOUR OPERATING SYSTME
+                                    </div>
+                                    <div class="ans-wrapper">
+                                        <div class="ans-item">
+                                            <input type="radio" name="op-sys" id="op-sys-bead-chain" value="man"
+                                                class="radio-ans-item" aria-invalid="false">
+                                            <label for="op-sys-bead-chain">
+                                                <img src="./assets/img/form-answers/manual.svg" alt="">
+                                                <div>Manual<br>(Bead Chain)</div>
+                                            </label>
+                                        </div>
+                                        <div class="ans-item">
+                                            <input type="radio" name="op-sys" id="op-sys-cord" value="man-cord"
+                                                class="radio-ans-item" aria-invalid="false">
+                                            <label for="op-sys-cord">
+                                                <img src="./assets/img/form-answers/manual-cord.svg" alt="">
+                                                <div>Manual<br>(Cord)</div>
+                                            </label>
+                                        </div>
+                                        <div class="ans-item">
+                                            <input type="radio" name="op-sys" id="op-sys-moto" value="motorized"
+                                                class="radio-ans-item" aria-invalid="false">
+                                            <label for="op-sys-moto">
+                                                <img src="./assets/img/form-answers/motorized.svg" alt="">
+                                                <div>Mortorized</div>
+                                            </label>
+                                        </div>
+                                        <div class="ans-item">
+                                            <input type="radio" name="op-sys" id="op-sys-gear" value="gear-op"
+                                                class="radio-ans-item" aria-invalid="false">
+                                            <label for="op-sys-gear">
+                                                <img src="./assets/img/form-answers/gear-op.svg" alt="">
+                                                <div>Gear<br>Operated</div>
+                                            </label>
+                                        </div>
+                                        <div class="ans-item">
+                                            <input type="radio" name="op-sys" id="op-sys-code" value="code-op"
+                                                class="radio-ans-item" aria-invalid="false">
+                                            <label for="op-sys-code">
+                                                <img src="./assets/img/form-answers/code-op.svg" alt="">
+                                                <div>Code<br>Operated</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="action-btn-wrapper">
+                                    <button type="button" class="btn btn-primary prev-btn">
+                                        <i class="fas fa-arrow-left"></i>
+                                        <span>Previous</span>
+                                    </button>
+                                    <button type="button" class="btn btn-primary next-btn">
+                                        <span>Next</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <script src="./assets/libs/JQuery/jquery-3.7.0.min.js"></script>
+    <script src="./assets/libs/Bootstrap/bootstrap.min.js"></script>
+    <script src="./assets/libs/Swiper-js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+
+</html>
