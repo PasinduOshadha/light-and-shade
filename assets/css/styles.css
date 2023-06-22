@@ -82,6 +82,7 @@ Generic styles goes here
 .navbar .cta-btn-wrapper {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .navbar .cta-btn-wrapper .cta-btn-primary {
@@ -116,6 +117,7 @@ Generic styles goes here
     justify-content: center;
     text-align: left;
     row-gap: 0px;
+
 }
 
 .navbar .cta-btn-wrapper .cta-btn-primary .title,
@@ -150,6 +152,7 @@ Generic styles goes here
     column-gap: 5px;
     margin-right: 20px;
     transition: all 0.25s ease-in-out;
+    height: 62px;
 }
 
 .navbar .cta-btn-wrapper .cta-btn-secondary:hover{
@@ -203,6 +206,17 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 88%);
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
+}
+
+.homepage-cover video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
 }
 
 .homepage-cover::before {
@@ -668,7 +682,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 .testimonial-block .testimonial-slider {
     /* max-width: 800px; */
     border-radius: 15px;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .testimonial-block .testimonial-slider {
@@ -730,6 +744,12 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     padding-left: 50px;
     padding-right: 50px;
     background-color: #fff;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .testimonial-block .testimonial-slider .testimonial-item .content-wrapper .user-icon {
@@ -782,6 +802,10 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 .testimonial-block .testimonial-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: #fff;
     ;
+}
+
+.testimonial-block .owl-carousel .owl-stage {
+    transition-timing-function: linear !important;
 }
 
 /* testimonial css : end */
@@ -1605,7 +1629,7 @@ color: #FFFFFF;
 
 /* index-1 page html css: start */
 .grid-section {
-    margin-top: 80px;
+    margin-top: 150px;
     margin-bottom: 80px;
 }
 
@@ -1643,22 +1667,32 @@ color: #FFFFFF;
 }
 
 .grid-section .projects-row .project-item .item-content {
-    width: 80%;
+    width: 85%;
 }
 
 .grid-section .projects-row .project-item .project-title {
     color: #000;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 600;
     line-height: 1em;
     letter-spacing: 0.01em;
     margin-bottom: 5px;
     margin-top: 20px;
 }
+.grid-section .projects-row .project-item small{
+    font-size: 18px;
+}
 
 .grid-section.projects-row .project-item .item-body .readmore-link {
     width: 10%;
     text-align: center;
+}
+
+.grid-section .projects-row .project-item .item-body{
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+
 }
 
 .grid-section .projects-row .project-item .item-body .readmore-link a {
@@ -1667,9 +1701,13 @@ color: #FFFFFF;
 
 .grid-section .projects-row .project-item .project-location {
     color: var(--primary-yellow);
-    font-size: 14px;
+    font-size: 23px;
     font-weight: 600;
     letter-spacing: 0.01em;
+}
+
+.grid-section .projects-row .project-item .item-body .readmore-link a .fas{
+    font-size: 29px;
 }
 
 .grid-section .projects-row .project-item .item-thumb {
@@ -1721,6 +1759,15 @@ color: #FFFFFF;
 
 /* Carrers Page start*/
 /* Carrers Page: job tabs start */
+.job-vacancy-block{
+    background: url('../img/carrers-page-bg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-bottom: 60px;
+    padding-top: 150px;
+}
+
 .job-vacancy-block .panel {
     margin-bottom: 0px;
 }
@@ -1731,11 +1778,6 @@ color: #FFFFFF;
     justify-content: center;
 }
 
-.job-vacancy-block {
-    margin-top: 30px;
-    margin-bottom: 60px;
-    padding-top: 120px;
-}
 
 .job-vacancy-block h1 {
     font-size: 50px;
@@ -1822,7 +1864,7 @@ color: #FFFFFF;
 /* Careers single page: start */
 .job-info-section {
     color: #fff;
-    padding-top: 80px
+    padding-top: 150px
 }
 
 .job-info-section .job-info-title {
@@ -2366,6 +2408,72 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 24%, rgba(
     
 }
 /* product selector page: end */
+
+/* owl carousel settings for sliders */
+.owl-dots .owl-dot{
+    height: 14px;
+    width: 14px;
+    background: rgba(255,255,255, 0.6) !important;
+    border-radius: 50px;
+}
+
+.owl-dots .owl-dot.active{
+    background: rgba(255,255,255, 1) !important;
+
+}
+
+.slider-wrapper1{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.owl-carousel{
+    position: relative;
+}
+
+.owl-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    min-width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.owl-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translatey(-50%);
+}
+
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-nav .owl-prev{
+    height: 54px;
+    width: 54px;
+    background: var(--primary-yellow) !important;
+    color: #fff !important;
+    border-radius: 50px;
+    font-size: 24px;
+}
+
+.owl-carousel .owl-nav .owl-prev{
+    transform: translatex(-25px);
+}
+
+.owl-carousel .owl-nav .owl-next{
+    transform: translatex(25px);
+}
+
+.owl-carousel .owl-nav .fas{
+    font-size: 24px;
+}
 
 
 /* nav menu */

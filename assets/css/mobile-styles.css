@@ -1,8 +1,12 @@
 /* mobile styles */
 @media (max-width: 480px) {
-    .burger{
+    .main-wrapper::before{
+        top: -8vh;
+    }
+    .burger {
         display: flex !important;
     }
+
     .navbar {
         max-width: 100vw;
     }
@@ -30,36 +34,42 @@
     }
 
     /* homepage cover section mobile styles: start */
-    .homepage-cover .cover-services-boxes{
+    .homepage-cover .cover-services-boxes {
         width: 100vw;
     }
-    .homepage-cover .cover-services-boxes a{
+
+    .homepage-cover video{
+        display: none;
+    }
+
+    .homepage-cover .cover-services-boxes a {
         width: 25%;
         min-width: 25%;
         min-height: inherit;
         padding: 5px;
     }
-    
-    .homepage-cover .cover-services-boxes a img{
+
+    .homepage-cover .cover-services-boxes a img {
         width: 50%;
     }
-    
-    .homepage-cover .cover-services-boxes a div{
+
+    .homepage-cover .cover-services-boxes a div {
         font-size: 10px;
     }
-    
-    .homepage-cover .cover-subtitle{
+
+    .homepage-cover .cover-subtitle {
         font-size: 15px !important;
         line-height: 16px !important;
         margin-bottom: 15px;
     }
-    
-    .homepage-cover h1{
+
+    .homepage-cover h1 {
         font-size: 30px;
         line-height: 31px;
         margin-bottom: 15px;
         margin-top: 0px;
     }
+
     /* homepage cover section mobile styles: end */
 
     .carousel-block .carousel-row .swiper-slide .item-body .item-content h5 {
@@ -93,8 +103,14 @@
         width: 10px;
     }
 
+    .blinds-section {
+        height: auto;
+        min-height: 300px;
+        display: inherit;
+    }
+
     /* projects section:start */
-    .tabs-block{
+    .tabs-block {
         height: inherit;
         min-height: inherit;
     }
@@ -120,20 +136,20 @@
         margin-right: auto;
     }
 
-    .tabs-block .projects-row .project-item .project-title{
+    .tabs-block .projects-row .project-item .project-title {
         font-size: 13px;
         line-height: 15px;
     }
 
-    .tabs-block .projects-row .project-item .project-location{
+    .tabs-block .projects-row .project-item .project-location {
         font-size: 11px;
     }
 
-    .tabs-block .projects-row .project-item .item-body .readmore-link a .fas{
+    .tabs-block .projects-row .project-item .item-body .readmore-link a .fas {
         font-size: 12.15px;
         margin-top: 15px;
     }
-    
+
     .tabs-block .projects-row.row {
         flex-wrap: wrap;
         row-gap: 10px;
@@ -149,12 +165,18 @@
         width: calc(50% - 20px) !important;
     }
 
-    .tabs-block .tab-pills-wrapper ul li a{
+    .tabs-block .tab-pills-wrapper ul li a {
         font-size: 13px;
     }
 
-    .tabs-block .tab-pills-wrapper .panel-default>.panel-heading{
+    .tabs-block .tab-pills-wrapper .panel-default>.panel-heading {
         padding: 5px;
+    }
+
+    .testimonial-block {
+        display: inherit;
+        min-height: inherit;
+        height: auto;
     }
 
     .testimonial-block .testimonial-slider .testimonial-item {
@@ -203,13 +225,14 @@
         height: inherit;
     }
 
-    .faq-section .faq-block-wrapper{
-        margin-right: inherit;;
+    .faq-section .faq-block-wrapper {
+        margin-right: inherit;
+        ;
     }
 
     .faq-section .faq-block-wrapper .faq-block .panel-heading {
         min-height: 50px;
-        
+
     }
 
     .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a {
@@ -254,9 +277,9 @@
     /* FAQ section:end */
 
     /* blog-section:start */
-    .blog-block{
+    .blog-block {
         padding-bottom: 50px;
-        }
+    }
 
     .blog-block .blog-section-title {
         font-size: 30px;
@@ -304,68 +327,70 @@
     /* blog-section:end */
 
     /* About us block: start */
-    .about-us-block{
+    .about-us-block {
         min-height: inherit;
         height: inherit;
     }
-    
-    .about-us-block .about-us-info-wrapper{
+
+    .about-us-block .about-us-info-wrapper {
         width: 100%;
         flex-direction: column;
-        column-gap:0;
+        column-gap: 0;
         row-gap: 0;
     }
-    
-    .about-us-block .about-us-info-wrapper .left-col{
+
+    .about-us-block .about-us-info-wrapper .left-col {
         width: 100%;
         text-align: center;
         font-weight: 400;
         font-size: 15px;
         line-height: 25px;
     }
-    
-    .about-us-block .about-us-info-wrapper .left-col::after{
+
+    .about-us-block .about-us-info-wrapper .left-col::after {
         display: none;
     }
-    
-    .about-us-block .about-us-info-wrapper .right-col .line-1{
+
+    .about-us-block .about-us-info-wrapper .right-col .line-1 {
         font-size: 75px;
         text-align: center;
         margin-bottom: 5px;
     }
-    .about-us-block .about-us-info-wrapper .right-col .line-1{
+
+    .about-us-block .about-us-info-wrapper .right-col .line-1 {
         font-size: 38px;
         line-height: 39px;
         margin-bottom: 5px;
     }
-    
-    .about-us-block .about-us-info-wrapper .right-col .line-2{
-        font-size:38px;
+
+    .about-us-block .about-us-info-wrapper .right-col .line-2 {
+        font-size: 38px;
         line-height: 39px;
         margin-bottom: 15px;
     }
-    
-    .about-us-block .about-us-info-wrapper .right-col .line-3{
+
+    .about-us-block .about-us-info-wrapper .right-col .line-3 {
         font-size: 60px;
         line-height: 61px;
         margin-bottom: 5px;
     }
-    
-    .about-us-block .about-us-info-wrapper .right-col .line-4{
+
+    .about-us-block .about-us-info-wrapper .right-col .line-4 {
         font-size: 35px;
         line-height: 35px;
         margin-bottom: 10px;
     }
-    
-    .about-us-block .about-us-info-wrapper .right-col .line-5{
+
+    .about-us-block .about-us-info-wrapper .right-col .line-5 {
         font-size: 40px;
-        line-height:40px;
+        line-height: 40px;
         margin-bottom: 5px;
     }
 
-    .about-us-block .card-row{
+    .about-us-block .card-row {
         display: none;
     }
+
     /* Abuot us block:end */
 
     /* Logo slider section:start */
@@ -384,34 +409,34 @@
     /* Logo slider section:end */
 
     /* footer section: start */
-    .footer-section .google-review-widget img{
+    .footer-section .google-review-widget img {
         width: 180px;
         transform: translateY(-0px);
         z-index: 99;
     }
-    
-    .footer-section .google-review-widget{
+
+    .footer-section .google-review-widget {
         transform: translateY(-40px);
         z-index: 99;
     }
-    
-    .footer-section .footer-main-img{
+
+    .footer-section .footer-main-img {
         display: none;
     }
-    
-    .footer-section .col-md-7{
+
+    .footer-section .col-md-7 {
         text-align: center;
     }
-    
-    .footer-section .mobile-only-text{
-         display: flex;
+
+    .footer-section .mobile-only-text {
+        display: flex;
         flex-direction: column;
         text-align: center;
         margin-bottom: 30px;
         margin-top: 250px;
     }
-    
-    .footer-section .mobile-only-text h2{
+
+    .footer-section .mobile-only-text h2 {
         font-size: 35px;
         font-weight: 600;
         color: #fff;
@@ -419,8 +444,8 @@
         margin-bottom: 5px;
         text-align: center;
     }
-    
-    .footer-section .mobile-only-text h3{
+
+    .footer-section .mobile-only-text h3 {
         margin-top: 0;
         max-width: 300px;
         line-height: 35px;
@@ -430,12 +455,12 @@
         text-align: center;
         margin-bottom: 15px;
     }
-    
-    .footer-section .mobile-only-text h3 span{
+
+    .footer-section .mobile-only-text h3 span {
         color: #fff !important;
     }
-    
-    .footer-section .mobile-only-text .btn{
+
+    .footer-section .mobile-only-text .btn {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -454,63 +479,64 @@
         padding-top: 7px;
         padding-bottom: 7px;
     }
-    
-    .footer-section .mobile-only-text .btn > div{
+
+    .footer-section .mobile-only-text .btn>div {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         text-align: left;
     }
-    
-    .footer-section .mobile-only-text .btn > img{
+
+    .footer-section .mobile-only-text .btn>img {
         width: 50px;
     }
-    .footer-section .mobile-only-text .btn > div .title{
+
+    .footer-section .mobile-only-text .btn>div .title {
         font-size: 14px;
     }
-    
-    .footer-section .mobile-only-text .btn > div .contact-no{
+
+    .footer-section .mobile-only-text .btn>div .contact-no {
         font-weight: 600;
         font-size: 20px
     }
-    
-    .footer-section .footer-info-row{
+
+    .footer-section .footer-info-row {
         display: flex;
         flex-direction: column-reverse;
-    
+
     }
-    
-    .footer-section .footer-info-row .col-right{
+
+    .footer-section .footer-info-row .col-right {
         margin-bottom: 30px !important;
         background: #1A1A1A;
         padding-top: 50px;
         padding-bottom: 50px;
     }
-    
-    .footer-section .footer-info-row .col-right h4{
+
+    .footer-section .footer-info-row .col-right h4 {
         text-align: center;
     }
-    
-    .footer-section .footer-info-row .col-right form{
+
+    .footer-section .footer-info-row .col-right form {
         justify-content: center !important;
-            
+
     }
-    
-    .footer-section .footer-info-row .col-right form input[type=email]{
+
+    .footer-section .footer-info-row .col-right form input[type=email] {
         margin-left: inherit;
     }
-    
-    .footer-bg-wrapper::before{
+
+    .footer-bg-wrapper::before {
         background: url('../img/peeping-through-window-mobile.png');
         background-size: contain;
         background-position: top;
         background-repeat: no-repeat;
         z-index: -2;
     }
-    
-    .footer-bg-wrapper::after{
-    background: rgb(0,0,0);
-    background:linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,1) 75%);
+
+    .footer-bg-wrapper::after {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 75%);
         z-index: -1;
         position: absolute;
         top: 0;
@@ -520,101 +546,102 @@
         content: '';
     }
 
-    .footer-section .icon-list-wrapper{
-        display: none;
-    }
-    
-    .footer-section .icon-list-wrapper-mobile{
-        display: flex !important;
-    }
-    
-    .address-box .icon-box-content{
-        width: 85%;
-    }
-    
-    .footer-section .footer-info-wrapper{
-        padding-bottom: 10px;
-    }
-    
-    .footer-section .copyiright-row{
-        padding-right: 50px;
-        padding-left: 50px;
-    }
-    
-    .footer-section .copyiright-row span{
+    .footer-section .icon-list-wrapper {
         display: none;
     }
 
-    .footer-section .footer-main-content{
+    .footer-section .icon-list-wrapper-mobile {
+        display: flex !important;
+    }
+
+    .address-box .icon-box-content {
+        width: 85%;
+    }
+
+    .footer-section .footer-info-wrapper {
+        padding-bottom: 10px;
+    }
+
+    .footer-section .copyiright-row {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .footer-section .copyiright-row span {
         display: none;
     }
+
+    .footer-section .footer-main-content {
+        display: none;
+    }
+
     /* footer section: end */
 
 
     /* carrers page: start */
-    .job-vacancy-block{
+    .job-vacancy-block {
         padding-top: 70px;
     }
 
-    .job-vacancy-block .title-row h1{
+    .job-vacancy-block .title-row h1 {
         font-size: 30px;
         max-width: 250px;
         margin-left: auto;
         margin-right: auto;
     }
-    
-    .job-vacancy-block .title-row h1 span{
+
+    .job-vacancy-block .title-row h1 span {
         color: var(--primary-yellow)
     }
-    
-    .job-vacancy-block .panel .nav-tabs{
+
+    .job-vacancy-block .panel .nav-tabs {
         overflow-x: scroll;
         width: 100%;
         padding-bottom: 10px;
         justify-content: flex-start;
     }
-    
-    .job-vacancy-block .panel .nav-tabs::-webkit-scrollbar{
+
+    .job-vacancy-block .panel .nav-tabs::-webkit-scrollbar {
         background-color: transparent;
-        width:1px;
+        width: 1px;
     }
-    
-    .job-vacancy-block .panel .nav-tabs li a{
+
+    .job-vacancy-block .panel .nav-tabs li a {
         white-space: nowrap;
     }
-    
-    .job-vacancy-block .panel .nav-tabs::-webkit-scrollbar-thumb{
-      background-color: #000;
-      border-radius: 0px; 
-        width:1px;
+
+    .job-vacancy-block .panel .nav-tabs::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: 0px;
+        width: 1px;
     }
-    
-    .job-vacancy-block .panel .nav-tabs::-webkit-scrollbar-track{
-      background-color: transparent; 
-        width:1px;
+
+    .job-vacancy-block .panel .nav-tabs::-webkit-scrollbar-track {
+        background-color: transparent;
+        width: 1px;
     }
-    
-    .job-vacancy-block .panel-body{
+
+    .job-vacancy-block .panel-body {
         padding-top: 0px;
     }
-    
-    .job-vacancy-block .category-tabs .job-post{
+
+    .job-vacancy-block .category-tabs .job-post {
         width: calc(100% - 0px);
         display: flex;
         flex-direction: column;
         padding-top: 10px !important;
     }
-    
-    
-    .job-vacancy-block .category-tabs .job-post .type{
-        order:-1;
+
+
+    .job-vacancy-block .category-tabs .job-post .type {
+        order: -1;
         display: block;
         margin-top: 20px;
         align-self: flex-start;
     }
-    
-    .job-vacancy-block .category-tabs .job-post h3{
-        margin-bottom: 0px;
+
+    .job-vacancy-block .category-tabs .job-post h3 {
+        margin-bottom: 10px;
         margin-top: 10px;
         line-height: 18px;
     }
@@ -622,111 +649,135 @@
     /* carrers page: end */
 
     /* careers page: start */
-    .job-info-section{
+    .job-info-section {
         padding-top: 80px;
     }
-    
-    .job-info-section .job-info-title{
+
+    .job-info-section .job-info-title {
         font-size: 30px;
         text-align: center;
     }
 
-    .job-info-section .job-info-title-hr{
+    .job-info-section .job-info-title-hr {
         min-width: 90vw;
         max-width: 100vw;
         width: 100%;
     }
-    
-    
+
+
     /* .job-info-section{
        padding-top: 40px;
     } */
-    
-    .job-info-section .job-info-icon-list{
+
+    .job-info-section .job-info-icon-list {
         flex-direction: row;
         flex-wrap: wrap;
         row-gap: 10px;
         text-align: center;
         font-size: 16px;
     }
-    
-    .job-info-section .job-info-icon-list .job-info-icon-list-item{
+
+    .job-info-section .job-info-icon-list .job-info-icon-list-item {
         width: calc(50% - 15px);
     }
-    
-    .job-info-section .job-info-icon-list .job-info-icon-list-item:nth-child(2){
-        text-align:  left;
+
+    .job-info-section .job-info-icon-list .job-info-icon-list-item:nth-child(2) {
+        text-align: left;
     }
-    
-    .job-info-section .job-info-icon-list .job-info-icon-list-item:nth-child(1){
-        text-align:  right;
+
+    .job-info-section .job-info-icon-list .job-info-icon-list-item:nth-child(1) {
+        text-align: right;
     }
-    
-    .job-info-section .job-info-icon-list .job-info-icon-list-item:nth-child(3){
-        width: 100%;  
+
+    .job-info-section .job-info-icon-list .job-info-icon-list-item:nth-child(3) {
+        width: 100%;
         font-size: 20px;
         font-weight: 600;
     }
-    
-    .job-info-section .job-info-description{
+
+    .job-info-section .job-info-description {
         text-align: center;
     }
-    
+
     .job-info-section .job-info-tasks,
-    .job-info-section .job-info-requirements{
+    .job-info-section .job-info-requirements {
         display: none;
     }
+
     /* carresrs page: end */
 
     /* single product page: start */
-    .product-single-page-content .product-page-cover .container .product-brief h1{
+    .product-single-page-content .product-page-cover .container .product-brief h1 {
         font-size: 30px;
     }
-    
-    .product-single-page-content .product-page-cta-btn-wrapper .product-page-btn-360{
+
+    .product-single-page-content .product-page-cta-btn-wrapper .product-page-btn-360 {
         display: none;
     }
-    
-    .product-single-page-content .product-page-short-discription{
+
+    .product-single-page-content .product-page-short-discription {
         max-width: 90vw;
         min-width: 200px;
         width: 100%
     }
 
-    .product-single-page-content .product-features .feature-list-row .feature-list{
+    .product-single-page-content .product-features .feature-list-row .feature-list {
         flex-direction: column;
         padding-left: 20px;
     }
-    
-    .product-single-page-content .feature-list .feature-list-item{
+
+    .product-single-page-content .feature-list .feature-list-item {
         width: 100%;
     }
-    .product-single-page-content .product-features .feature-list-row{
+
+    .product-single-page-content .product-features .feature-list-row {
         margin-bottom: 10px;
     }
+
     /* single product page: end */
 
     /* blinds/categories page: start */
-    
-    .grid-section .projects-row .project-item{
+    .grid-section {
+        margin-top: 80px;
+    }
+
+    .grid-section .projects-row .project-item {
         width: calc(50% - 10px) !important;
     }
-    
-    .grid-section .projects-row.row{
+
+    .grid-section .projects-row.row {
         flex-wrap: wrap;
         row-gap: 10px;
         padding-left: 10px;
         padding-right: 10px;
     }
-    
+
     .grid-section .projects-row.row::before,
-    .grid-section .projects-row.row::after{
-       display: none; 
+    .grid-section .projects-row.row::after {
+        display: none;
     }
-    
-    .grid-section h1{
+
+    .grid-section .projects-row .project-item .project-title {
+        font-size: 13px;
+        margin-bottom: 0px;
+    }
+
+    .grid-section .projects-row .project-item small {
+        font-size: 7.7px;
+    }
+
+    .grid-section .projects-row .project-item .project-location {
+        font-size: 11px;
+    }
+
+    .grid-section h1 {
         margin-bottom: 25px;
     }
+
+    .grid-section .projects-row .project-item .item-body .readmore-link a .fas {
+        font-size: 12.5px;
+    }
+
     /* blinds/categories page: end */
 
 

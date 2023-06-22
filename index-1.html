@@ -15,8 +15,9 @@
     <!-- spartan font -->
     <link href="https://fonts.cdnfonts.com/css/spartan" rel="stylesheet">
 
-    <!-- swiperjS css -->
-    <link rel="stylesheet" href="./assets/libs/Swiper-js/swiper-bundle.min.css">
+    <!-- owl crousel css -->
+    <link rel="stylesheet" href="./assets/libs/owlcarousel2.3.4/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/libs/owlcarousel2.3.4/css/owl.theme.default.css">
 
     <!-- styel css -->
     <link rel="stylesheet" href="./assets/css/styles.css">
@@ -27,251 +28,263 @@
 
 <body>
 
-    <!-- Navbar start -->
-    <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
+    <div class="main-wrapper">
 
-                <a class="navbar-brand" href="#">
-                    <img class="img-fluid" src="./assets/img/logo.svg" />
-                </a>
-                <div class="burger">
-                    <input type="checkbox" id="menu-toggle" />
-                    <div class="strip burger-strip-2">
+        <!-- Navbar start -->
+        <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
 
-                        <div></div>
-                        <div></div>
-                        <div></div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Projects</a></li>
-                </ul>
-                <div class="cta-btn-wrapper">
-                    <a role="button" class="btn btn-primary cta-btn-primary">
-                        <img src="./assets/img/call-1-icon.svg" />
-                        <div>
-                            <span class="title">Contact Us</span>
-                            <span class="contact-no">+971 4 266 2116</span>
-                        </div>
+                    <a class="navbar-brand" href="#">
+                        <img class="img-fluid" src="./assets/img/logo.svg" />
                     </a>
-                    <a role="button" class="btn btn-primary cta-btn-secondary">
-                        <img src="./assets/img/calender-icon.svg" />
-                        <div>
-                            <span class="title">schedule AN</span>
-                            <span class="contact-no">appointment </span>
-                        </div>
-                    </a>
-                    <img class="search-icon" src="./assets/img/mag-icon.svg" />
-                    <img class="burger-icons" src="./assets/img/burger-icon.svg" />
-                </div>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-    <!-- Navbar end -->
+                    <div class="burger">
+                        <input type="checkbox" id="menu-toggle" />
+                        <div class="strip burger-strip-2">
 
-    <main>
-        <section class="grid-section">
-            <div class="container">
-                <div class="row title-row">
+                            <div></div>
+                            <div></div>
+                            <div></div>
 
-                    <div class="col-md-12">
-                        <h1 class="upper-text white-text underlined">
-                            Curtains
-                        </h1>
-                    </div>
-                    
-                </div>
-                
-                <div class="row projects-row">
-                    <div class="col-md-3 project-item">
-                        <a href="#" class="project-item-link"></a>
-                        <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
-                        <div class="item-body">
-                            <div class="item-content">
-                                <h5 class="project-title">Blackout Curtains</h5>
-                                <div class="project-location">Rajagiriya</div>
-                            </div>
-                            <div class="readmore-link">
-                                <a href="#"><i class="fas fa-arrow-right"></i></a>
-                            </div>
                         </div>
                     </div>
-                    <div class="col-md-3 project-item">
-                        <a href="#" class="project-item-link"></a>
-                        <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
-                        <div class="item-body">
-                            <div class="item-content">
-                                <h5 class="project-title">Blackout Curtains</h5>
-                                <div class="project-location">Rajagiriya</div>
-                            </div>
-                            <div class="readmore-link">
-                                <a href="#"><i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 project-item">
-                        <a href="#" class="project-item-link"></a>
-                        <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
-                        <div class="item-body">
-                            <div class="item-content">
-                                <h5 class="project-title">Blackout Curtains</h5>
-                                <div class="project-location">Rajagiriya</div>
-                            </div>
-                            <div class="readmore-link">
-                                <a href="#"><i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 project-item">
-                        <a href="#" class="project-item-link"></a>
-                        <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
-                        <div class="item-body">
-                            <div class="item-content">
-                                <h5 class="project-title">Blackout Curtains</h5>
-                                <div class="project-location">Rajagiriya</div>
-                            </div>
-                            <div class="readmore-link">
-                                <a href="#"><i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
 
-                <div class="row projects-row">
-                    <div class="col-md-3 project-item">
-                        <a href="#" class="project-item-link"></a>
-                        <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
-                        <div class="item-body">
-                            <div class="item-content">
-                                <h5 class="project-title">Blackout Curtains</h5>
-                                <div class="project-location">Rajagiriya</div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Projects</a></li>
+                    </ul>
+                    <div class="cta-btn-wrapper">
+                        <a role="button" class="btn btn-primary cta-btn-primary">
+                            <img src="./assets/img/call-1-icon.svg" />
+                            <div>
+                                <span class="title">Contact Us</span>
+                                <span class="contact-no">+971 4 266 2116</span>
                             </div>
-                            <div class="readmore-link">
-                                <a href="#"><i class="fas fa-arrow-right"></i></a>
+                        </a>
+                        <a role="button" class="btn btn-primary cta-btn-secondary">
+                            <img src="./assets/img/calender-icon.svg" />
+                            <div>
+                                <span class="title">schedule AN</span>
+                                <span class="contact-no">appointment </span>
                             </div>
-                        </div>
+                        </a>
+                        <img class="search-icon" src="./assets/img/mag-icon.svg" />
+                        <img class="burger-icons" src="./assets/img/burger-icon.svg" />
                     </div>
-                    <div class="col-md-3 project-item">
-                        <a href="#" class="project-item-link"></a>
-                        <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
-                        <div class="item-body">
-                            <div class="item-content">
-                                <h5 class="project-title">Blackout Curtains</h5>
-                                <div class="project-location">Rajagiriya</div>
-                            </div>
-                            <div class="readmore-link">
-                                <a href="#"><i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 project-item">
-                        <a href="#" class="project-item-link"></a>
-                        <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
-                        <div class="item-body">
-                            <div class="item-content">
-                                <h5 class="project-title">Blackout Curtains</h5>
-                                <div class="project-location">Rajagiriya</div>
-                            </div>
-                            <div class="readmore-link">
-                                <a href="#"><i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 project-item">
-                        <a href="#" class="project-item-link"></a>
-                        <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
-                        <div class="item-body">
-                            <div class="item-content">
-                                <h5 class="project-title">Blackout Curtains</h5>
-                                <div class="project-location">Rajagiriya</div>
-                            </div>
-                            <div class="readmore-link">
-                                <a href="#"><i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-    </main>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <!-- Navbar end -->
 
-    <!-- Homepage section 8: start -->
-    <section class="clients-section logo-slider-block">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h1 class="logo-slider-section-title white-text">Our Customers</h1>
+        <main>
+
+            <section class="grid-section">
+                <div class="container">
+                    <div class="row title-row">
+
+                        <div class="col-md-12">
+                            <h1 class="upper-text white-text underlined">
+                                Curtains
+                            </h1>
+                        </div>
+
+                    </div>
+
+                    <div class="row projects-row">
+                        <div class="col-md-3 project-item">
+                            <a href="#" class="project-item-link"></a>
+                            <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
+                            <div class="item-body">
+                                <div class="item-content">
+                                    <h5 class="project-title">Blackout Curtains</h5>
+                                    <small>Starting From </small>
+                                    <div class="project-location">50AED/sq. ft</div>
+                                </div>
+                                <div class="readmore-link">
+                                    <a href="#"><i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 project-item">
+                            <a href="#" class="project-item-link"></a>
+                            <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
+                            <div class="item-body">
+                                <div class="item-content">
+                                    <h5 class="project-title">Blackout Curtains</h5>
+                                    <small>Starting From </small>
+                                    <div class="project-location">50AED/sq. ft</div>
+                                </div>
+                                <div class="readmore-link">
+                                    <a href="#"><i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 project-item">
+                            <a href="#" class="project-item-link"></a>
+                            <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
+                            <div class="item-body">
+                                <div class="item-content">
+                                    <h5 class="project-title">Blackout Curtains</h5>
+                                    <small>Starting From </small>
+                                    <div class="project-location">50AED/sq. ft</div>
+                                </div>
+                                <div class="readmore-link">
+                                    <a href="#"><i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 project-item">
+                            <a href="#" class="project-item-link"></a>
+                            <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
+                            <div class="item-body">
+                                <div class="item-content">
+                                    <h5 class="project-title">Blackout Curtains</h5>
+                                    <small>Starting From </small>
+                                    <div class="project-location">50AED/sq. ft</div>
+                                </div>
+                                <div class="readmore-link">
+                                    <a href="#"><i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row projects-row">
+                        <div class="col-md-3 project-item">
+                            <a href="#" class="project-item-link"></a>
+                            <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
+                            <div class="item-body">
+                                <div class="item-content">
+                                    <h5 class="project-title">Blackout Curtains</h5>
+                                    <small>Starting From </small>
+                                    <div class="project-location">50AED/sq. ft</div>
+                                </div>
+                                <div class="readmore-link">
+                                    <a href="#"><i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 project-item">
+                            <a href="#" class="project-item-link"></a>
+                            <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
+                            <div class="item-body">
+                                <div class="item-content">
+                                    <h5 class="project-title">Blackout Curtains</h5>
+                                    <small>Starting From </small>
+                                    <div class="project-location">50AED/sq. ft</div>
+                                </div>
+                                <div class="readmore-link">
+                                    <a href="#"><i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 project-item">
+                            <a href="#" class="project-item-link"></a>
+                            <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
+                            <div class="item-body">
+                                <div class="item-content">
+                                    <h5 class="project-title">Blackout Curtains</h5>
+                                    <small>Starting From </small>
+                                    <div class="project-location">50AED/sq. ft</div>
+                                </div>
+                                <div class="readmore-link">
+                                    <a href="#"><i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 project-item">
+                            <a href="#" class="project-item-link"></a>
+                            <img src="./assets/img/slider-imgs/1.png" class="item-thumb" />
+                            <div class="item-body">
+                                <div class="item-content">
+                                    <h5 class="project-title">Blackout Curtains</h5>
+                                    <small>Starting From </small>
+                                    <div class="project-location">50AED/sq. ft</div>
+                                </div>
+                                <div class="readmore-link">
+                                    <a href="#"><i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="logo-slider-wrapper">
-                        <div class="swiper logo_slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide logo-item">
-                                    <img src="./assets/img/logo-slider/1.png" class="logo" />
-                                </div>
-                                <div class="swiper-slide logo-item">
-                                    <img src="./assets/img/logo-slider/2.png" class="logo" />
-                                </div>
-                                <div class="swiper-slide logo-item">
-                                    <img src="./assets/img/logo-slider/3.png" class="logo" />
-                                </div>
-                                <div class="swiper-slide logo-item">
-                                    <img src="./assets/img/logo-slider/4.png" class="logo" />
-                                </div>
-                                <div class="swiper-slide logo-item">
-                                    <img src="./assets/img/logo-slider/5.png" class="logo" />
-                                </div>
-                                <div class="swiper-slide logo-item">
-                                    <img src="./assets/img/logo-slider/6.png" class="logo" />
-                                </div>
-                                <div class="swiper-slide logo-item">
-                                    <img src="./assets/img/logo-slider/1.png" class="logo" />
-                                </div>
-                                <div class="swiper-slide logo-item">
-                                    <img src="./assets/img/logo-slider/2.png" class="logo" />
-                                </div>
-                                <div class="swiper-slide logo-item">
-                                    <img src="./assets/img/logo-slider/3.png" class="logo" />
-                                </div>
-                                <div class="swiper-slide logo-item">
-                                    <img src="./assets/img/logo-slider/4.png" class="logo" />
-                                </div>
-                                <div class="swiper-slide logo-item">
-                                    <img src="./assets/img/logo-slider/5.png" class="logo" />
-                                </div>
-                                <div class="swiper-slide logo-item">
-                                    <img src="./assets/img/logo-slider/6.png" class="logo" />
-                                </div>
-                                <div class="swiper-slide logo-item">
-                                    <img src="./assets/img/logo-slider/4.png" class="logo" />
-                                </div>
-                                <div class="swiper-slide logo-item">
-                                    <img src="./assets/img/logo-slider/5.png" class="logo" />
-                                </div>
-                                <div class="swiper-slide logo-item">
-                                    <img src="./assets/img/logo-slider/6.png" class="logo" />
+            </section>
+
+            <!-- Homepage section 8: start -->
+            <section class="clients-section logo-slider-block">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h1 class="logo-slider-section-title white-text">Our Customers</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="logo-slider-wrapper">
+                                <div class="owl-carousel logo-slider">
+                                    <div class="swiper-slide logo-item">
+                                        <img src="./assets/img/logo-slider/1.png" class="logo" />
+                                    </div>
+                                    <div class="swiper-slide logo-item">
+                                        <img src="./assets/img/logo-slider/2.png" class="logo" />
+                                    </div>
+                                    <div class="swiper-slide logo-item">
+                                        <img src="./assets/img/logo-slider/3.png" class="logo" />
+                                    </div>
+                                    <div class="swiper-slide logo-item">
+                                        <img src="./assets/img/logo-slider/4.png" class="logo" />
+                                    </div>
+                                    <div class="swiper-slide logo-item">
+                                        <img src="./assets/img/logo-slider/5.png" class="logo" />
+                                    </div>
+                                    <div class="swiper-slide logo-item">
+                                        <img src="./assets/img/logo-slider/6.png" class="logo" />
+                                    </div>
+                                    <div class="swiper-slide logo-item">
+                                        <img src="./assets/img/logo-slider/1.png" class="logo" />
+                                    </div>
+                                    <div class="swiper-slide logo-item">
+                                        <img src="./assets/img/logo-slider/2.png" class="logo" />
+                                    </div>
+                                    <div class="swiper-slide logo-item">
+                                        <img src="./assets/img/logo-slider/3.png" class="logo" />
+                                    </div>
+                                    <div class="swiper-slide logo-item">
+                                        <img src="./assets/img/logo-slider/4.png" class="logo" />
+                                    </div>
+                                    <div class="swiper-slide logo-item">
+                                        <img src="./assets/img/logo-slider/5.png" class="logo" />
+                                    </div>
+                                    <div class="swiper-slide logo-item">
+                                        <img src="./assets/img/logo-slider/6.png" class="logo" />
+                                    </div>
+                                    <div class="swiper-slide logo-item">
+                                        <img src="./assets/img/logo-slider/4.png" class="logo" />
+                                    </div>
+                                    <div class="swiper-slide logo-item">
+                                        <img src="./assets/img/logo-slider/5.png" class="logo" />
+                                    </div>
+                                    <div class="swiper-slide logo-item">
+                                        <img src="./assets/img/logo-slider/6.png" class="logo" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- Homepage section 8: end -->
+            </section>
+            <!-- Homepage section 8: end -->
+        </main>
+
+    </div>
+
 
     <!-- footer start -->
     <footer class="footer-section">
@@ -404,7 +417,7 @@
 
     <script src="./assets/libs/JQuery/jquery-3.7.0.min.js"></script>
     <script src="./assets/libs/Bootstrap/bootstrap.min.js"></script>
-    <script src="./assets/libs/Swiper-js/swiper-bundle.min.js"></script>
+    <script src="./assets/libs/owlcarousel2.3.4/js/owl.carousel.min.js"></script>
     <script src="./assets/js/scripts.js"></script>
 </body>
 
