@@ -15,8 +15,9 @@
     <!-- spartan font -->
     <link href="https://fonts.cdnfonts.com/css/spartan" rel="stylesheet">
 
-    <!-- swiperjS css -->
-    <link rel="stylesheet" href="./assets/libs/Swiper-js/swiper-bundle.min.css">
+    <!-- owl crousel css -->
+    <link rel="stylesheet" href="./assets/libs/owlcarousel2.3.4/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/libs/owlcarousel2.3.4/css/owl.theme.default.css">
 
     <!-- styel css -->
     <link rel="stylesheet" href="./assets/css/styles.css">
@@ -26,164 +27,167 @@
 </head>
 
 <body>
+    <div class="main-wrapper">
+
+        <!-- Navbar start -->
+        <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" href="#">
+                        <img class="img-fluid" src="./assets/img/logo.svg" />
+                    </a>
+                    <div class="burger">
+                        <input type="checkbox" id="menu-toggle" />
+                        <div class="strip burger-strip-2">
+
+                            <div></div>
+                            <div></div>
+                            <div></div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Projects</a></li>
+                    </ul>
+                    <div class="cta-btn-wrapper">
+                        <a role="button" class="btn btn-primary cta-btn-primary">
+                            <img src="./assets/img/call-1-icon.svg" />
+                            <div>
+                                <span class="title">Contact Us</span>
+                                <span class="contact-no">+971 4 266 2116</span>
+                            </div>
+                        </a>
+                        <a role="button" class="btn btn-primary cta-btn-secondary">
+                            <img src="./assets/img/calender-icon.svg" />
+                            <div>
+                                <span class="title">schedule AN</span>
+                                <span class="contact-no">appointment </span>
+                            </div>
+                        </a>
+                        <img class="search-icon" src="./assets/img/mag-icon.svg" />
+                        <img class="burger-icons" src="./assets/img/burger-icon.svg" />
+                    </div>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <!-- Navbar end -->
+
+        <main>
+            <section class="job-info-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 job-info">
+                            <h1 class="job-info-title">
+                                SENIOR PROJECT MANAGER – DIGITAL MARKETING
+                            </h1>
+                            <div class="hr job-info-title-hr">
     
-    <!-- Navbar start -->
-    <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-
-                <a class="navbar-brand" href="#">
-                    <img class="img-fluid" src="./assets/img/logo.svg" />
-                </a>
-                <div class="burger">
-                    <input type="checkbox" id="menu-toggle" />
-                    <div class="strip burger-strip-2">
-
-                        <div></div>
-                        <div></div>
-                        <div></div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Projects</a></li>
-                </ul>
-                <div class="cta-btn-wrapper">
-                    <a role="button" class="btn btn-primary cta-btn-primary">
-                        <img src="./assets/img/call-1-icon.svg" />
-                        <div>
-                            <span class="title">Contact Us</span>
-                            <span class="contact-no">+971 4 266 2116</span>
-                        </div>
-                    </a>
-                    <a role="button" class="btn btn-primary cta-btn-secondary">
-                        <img src="./assets/img/calender-icon.svg" />
-                        <div>
-                            <span class="title">schedule AN</span>
-                            <span class="contact-no">appointment </span>
-                        </div>
-                    </a>
-                    <img class="search-icon" src="./assets/img/mag-icon.svg" />
-                    <img class="burger-icons" src="./assets/img/burger-icon.svg" />
-                </div>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-    <!-- Navbar end -->
-
-    <main>
-        <section class="job-info-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 job-info">
-                        <h1 class="job-info-title">
-                            SENIOR PROJECT MANAGER – DIGITAL MARKETING
-                        </h1>
-                        <div class="hr job-info-title-hr">
-
-                        </div>
-                        <div class="job-info-icon-list">
-                            <div class="job-info-icon-list-item">
-                                <i class="far fa-clock"></i>
-                                FullTime
                             </div>
-                            <div class="job-info-icon-list-item">
-                                <i class="far fa-clock"></i>
-                                Colombo
+                            <div class="job-info-icon-list">
+                                <div class="job-info-icon-list-item">
+                                    <i class="far fa-clock"></i>
+                                    FullTime
+                                </div>
+                                <div class="job-info-icon-list-item">
+                                    <i class="far fa-clock"></i>
+                                    Colombo
+                                </div>
+                                <div class="job-info-icon-list-item">
+                                    <i class="far fa-clock"></i>
+                                    LKR75,000 - LKR100,000
+                                </div>
                             </div>
-                            <div class="job-info-icon-list-item">
-                                <i class="far fa-clock"></i>
-                                LKR75,000 - LKR100,000
+                            <div class="job-info-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis gravida dui et ultrices. Maecenas accumsan tellus quis lectus tristique luctus. Praesent ultricies tortor a neque imperdiet, ut sagittis nisi condimentum. Nulla vestibulum pharetra neque nec dignissim. Nullam molestie tortor ipsum, ut vehicula leo efficitur a. Vivamus nec odio aliquet, maximus nisi luctus, laoreet dolor. Phasellus ac luctus orci, vel laoreet nibh. Fusce ut mattis odio. Nulla facilisi. Praesent eros libero, vestibulum vel pulvinar ac, cursus nec tortor. Aliquam semper vel arcu sollicitudin efficitur. Suspendisse eu lorem velit. Nulla ut erat nisl.
                             </div>
-                        </div>
-                        <div class="job-info-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis gravida dui et ultrices. Maecenas accumsan tellus quis lectus tristique luctus. Praesent ultricies tortor a neque imperdiet, ut sagittis nisi condimentum. Nulla vestibulum pharetra neque nec dignissim. Nullam molestie tortor ipsum, ut vehicula leo efficitur a. Vivamus nec odio aliquet, maximus nisi luctus, laoreet dolor. Phasellus ac luctus orci, vel laoreet nibh. Fusce ut mattis odio. Nulla facilisi. Praesent eros libero, vestibulum vel pulvinar ac, cursus nec tortor. Aliquam semper vel arcu sollicitudin efficitur. Suspendisse eu lorem velit. Nulla ut erat nisl.
-                        </div>
-                        <div class="job-info-tasks">
-                            <div class="job-info-tasks-title-wrapper">
-                                <h3 class="job-info-tasks-title">The task at hand?</h3>
-                                <div class="job-info-tasks-title-line"></div>
+                            <div class="job-info-tasks">
+                                <div class="job-info-tasks-title-wrapper">
+                                    <h3 class="job-info-tasks-title">The task at hand?</h3>
+                                    <div class="job-info-tasks-title-line"></div>
+                                </div>
+                                
+                                <ul class="job-info-tasks-list">
+                                    <li>
+                                        Be the hub between media, the creative, account strategy, client and all other internal teams, driving projects forward quickly and efficiently.
+                                    </li>
+                                    <li>
+                                        Work closely with Leaders/Clients to define project requirements, develop budgets and timelines, write statements of work, and plan resources for all projects.
+                                    </li>
+                                    <li>
+                                        Manage the project throughout the full life cycle of projects including but not limited to: Brand Creative, Websites & Digital Experiences, Social Content, Digital Videos, and Events.
+                                    </li>
+                                    <li>Build project plans with an understanding of internal resources, third-party capabilities, time requirements, and business objectives</li>
+                                    <li>Lead and schedule necessary project related meetings such as kickoffs, brainstorms, inter-agency meetings, and deliverables reviews</li>
+                                    <li>Keep all project stakeholders (creative, account, production, analytics, etc.) on track to hit all deadlines by ensuring proper briefings.</li>
+                                    <li>check-ins, hand-offs, and information transfer.</li>
+                                    <li>Work closely with the Managers and Creative & Development teams to manage and allocate resources in an effective and efficient way.</li>
+                                    <li>Prepare client proposals, agreements, change orders, and other contract documents.</li>
+                                    <li>Aid in the management of the freelance process when resources are needed, hired, and utilized.</li>
+                                    <li>Provide guidance, mentorship, and skill-building to team members.</li>
+                                    <li>Responsible for the operation, customization and improvement of team processes necessary for each business needs.</li>
+                                    <li>Work with other senior department leads to maximize operational efficiencies and define processes on the team, project and portfolio levels.</li>
+                                    <li>Nurture cross-functional agency relationships and be the ultimate problem solver to deliver work to Clients</li>
+                                </ul>
                             </div>
-                            
-                            <ul class="job-info-tasks-list">
-                                <li>
-                                    Be the hub between media, the creative, account strategy, client and all other internal teams, driving projects forward quickly and efficiently.
-                                </li>
-                                <li>
-                                    Work closely with Leaders/Clients to define project requirements, develop budgets and timelines, write statements of work, and plan resources for all projects.
-                                </li>
-                                <li>
-                                    Manage the project throughout the full life cycle of projects including but not limited to: Brand Creative, Websites & Digital Experiences, Social Content, Digital Videos, and Events.
-                                </li>
-                                <li>Build project plans with an understanding of internal resources, third-party capabilities, time requirements, and business objectives</li>
-                                <li>Lead and schedule necessary project related meetings such as kickoffs, brainstorms, inter-agency meetings, and deliverables reviews</li>
-                                <li>Keep all project stakeholders (creative, account, production, analytics, etc.) on track to hit all deadlines by ensuring proper briefings.</li>
-                                <li>check-ins, hand-offs, and information transfer.</li>
-                                <li>Work closely with the Managers and Creative & Development teams to manage and allocate resources in an effective and efficient way.</li>
-                                <li>Prepare client proposals, agreements, change orders, and other contract documents.</li>
-                                <li>Aid in the management of the freelance process when resources are needed, hired, and utilized.</li>
-                                <li>Provide guidance, mentorship, and skill-building to team members.</li>
-                                <li>Responsible for the operation, customization and improvement of team processes necessary for each business needs.</li>
-                                <li>Work with other senior department leads to maximize operational efficiencies and define processes on the team, project and portfolio levels.</li>
-                                <li>Nurture cross-functional agency relationships and be the ultimate problem solver to deliver work to Clients</li>
-                            </ul>
-                        </div>
-                        <div class="job-info-requirements">
-                            <div class="job-info-requirements-title-wrapper">
-                                <h3 class="job-info-requirements-title">The ideal candidate has:</h3>
-                                <div class="job-info-requirements-title-line"></div>
+                            <div class="job-info-requirements">
+                                <div class="job-info-requirements-title-wrapper">
+                                    <h3 class="job-info-requirements-title">The ideal candidate has:</h3>
+                                    <div class="job-info-requirements-title-line"></div>
+                                </div>
+                                <ul class="job-info-requirements-list">
+                                    <li>
+                                        At least 1-3 years of experience within a digital agency environment in a project management capacity or similar.
+                                    </li>
+                                    <li>
+                                        Bachelor's degree in marketing, communications, or related fields, or entrepreneurial street cred.
+                                    </li>
+                                    <li>
+                                        Experience with digital and social projects and deliverables
+                                    </li>
+                                    <li>
+                                        Strong ability to manage account, strategy, creative, analytics, and technical teams, as well as manage direct reports.
+                                    </li>
+                                    <li>
+                                        Understanding of, and experience executing projects with that adhere to platform guidelines, legal considerations, advertising regulations and social/digital best practices
+                                    </li>
+                                    <li>
+                                        Highly organized with a strong attention to detail
+                                    </li>
+                                    <li>
+                                        Strong Excel ands Google Sheet skills
+                                    </li>
+                                    <li>Experience creating and managing budgets and staffing plans</li>
+                                    <li>A cool, calm and collected approach to problem solving</li>
+                                    <li>Strong and Effective communication skills</li>
+                                    <li>Experience in the digital space, specifically as it relates to the digital and social creative process</li>
+                                    <li>Ability to work both independently, and as a part of a team</li>
+                                    <li>Ability to work well in a fast-paced environment</li>
+                                    <li>Demonstrated experience in and passion for team leadership, mentorship, and development of junior talent</li>
+                                </ul>
                             </div>
-                            <ul class="job-info-requirements-list">
-                                <li>
-                                    At least 1-3 years of experience within a digital agency environment in a project management capacity or similar.
-                                </li>
-                                <li>
-                                    Bachelor's degree in marketing, communications, or related fields, or entrepreneurial street cred.
-                                </li>
-                                <li>
-                                    Experience with digital and social projects and deliverables
-                                </li>
-                                <li>
-                                    Strong ability to manage account, strategy, creative, analytics, and technical teams, as well as manage direct reports.
-                                </li>
-                                <li>
-                                    Understanding of, and experience executing projects with that adhere to platform guidelines, legal considerations, advertising regulations and social/digital best practices
-                                </li>
-                                <li>
-                                    Highly organized with a strong attention to detail
-                                </li>
-                                <li>
-                                    Strong Excel ands Google Sheet skills
-                                </li>
-                                <li>Experience creating and managing budgets and staffing plans</li>
-                                <li>A cool, calm and collected approach to problem solving</li>
-                                <li>Strong and Effective communication skills</li>
-                                <li>Experience in the digital space, specifically as it relates to the digital and social creative process</li>
-                                <li>Ability to work both independently, and as a part of a team</li>
-                                <li>Ability to work well in a fast-paced environment</li>
-                                <li>Demonstrated experience in and passion for team leadership, mentorship, and development of junior talent</li>
-                            </ul>
-                        </div>
-                        <div class="job-info-cta-wrapper text-center">
-                            <h4>The ideal candidate has:</h4>
-                            <button class="btn btn-primary theme-primary-btn">
-                                Apply Now
-                            </button>
+                            <div class="job-info-cta-wrapper text-center">
+                                <h4>The ideal candidate has:</h4>
+                                <button class="btn btn-primary theme-primary-btn">
+                                    Apply Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+    
+            </section>
+        </main>
+    </div>
 
-        </section>
-    </main>
 
     <!-- footer start -->
     <footer class="footer-section">
@@ -194,7 +198,33 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-right">
-                        <img class="footer-main-img" src="./assets/img/footer-image.svg" alt="">
+                        <!-- <img class="footer-main-img" src="./assets/img/footer-image.svg" alt=""> -->
+                        <div class="footer-main-content">
+                            <div class="content-text">
+                                <div class="line-1">
+                                    BALANCE PRIVACY
+                                </div>
+                                <div class="line-2">
+                                    & LIGHT C<span>O</span>NTR<span>O</span>LL
+                                </div>
+                            </div>
+                            <div class="footer-cta-btn-wrapper cta-btn-wrapper">
+                                <a role="button" class="btn btn-primary cta-btn-primary btn-call">
+                                    <img src="./assets/img/call-1-icon.svg" />
+                                    <div>
+                                        <span class="title">Contact Us</span>
+                                        <span class="contact-no">+971 4 266 2116</span>
+                                    </div>
+                                </a>
+                                <a role="button" class="btn btn-primary cta-btn-secondary btn-whatsapp">
+                                    <img src="./assets/img/whatsapp-color-icon.svg" />
+                                    <div>
+                                        <span class="title">WHATSAPP US</span>
+                                        <span class="contact-no">+971 52 140 0693</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                         <div class="mobile-only-text">
                             <h2>OVER A MILLION</h2>
                             <h3>BLINDS & curtains <span>INSTALLED</span></h3>
@@ -264,13 +294,14 @@
                                 <div class="icon-box-content">
                                     <div class="title">Address</div>
                                     <div class="sub-title">
-                                        <div>BC4-03, 4th floor, AB Center, Sheikh Zayed Road, Al Barsha 01, Dubai, UAE
+                                        <div>BC4-03, 4th floor, AB Center, Sheikh Zayed Road, Al Barsha 01, Dubai,
+                                            UAE
                                         </div>
                                         <a href="#">GET DIRECTION<i class="fas fa-angle-double-right"></i></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="icon-list-wrapper icon-list-wrapper-mobile">
+                            <div class="icon-list-wrapper icon-list-wrapper-mobile hidden-md hidden-lg">
                                 <ul>
                                     <li>
                                         <i class="fab fa-facebook-f"></i>
@@ -297,7 +328,7 @@
                         <h4>Join Our <span>Newsletter</span></h4>
                         <div class="newsletter-form-wrapper">
                             <form>
-                                <input type="email" name="" id="">
+                                <input type="email" placeholder="Email" name="" id="">
                                 <button class="btn btn-primary"><i class="fab fa-telegram-plane"></i></button>
                             </form>
                         </div>
@@ -313,6 +344,11 @@
 
     </footer>
     <!-- footer end -->
+
+    <script src="./assets/libs/JQuery/jquery-3.7.0.min.js"></script>
+    <script src="./assets/libs/Bootstrap/bootstrap.min.js"></script>
+    <script src="./assets/libs/owlcarousel2.3.4/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
 
 </body>
 

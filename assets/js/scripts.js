@@ -107,3 +107,36 @@ $(document).ready(function () {
 });
 
 
+
+// smart product finder
+let step = 1;
+
+
+//step increment
+const nextBtn = document.querySelector('.next-btn')
+if(nextBtn){
+  nextBtn.addEventListener('click', e => {
+    document.querySelector('.step-' + step).classList.remove('show')
+    step < 4 ? step++ : '';
+    document.querySelector('.step-' + step).classList.add('show')
+  
+  })
+}
+
+
+//step decremnt
+const prevBtn = document.querySelector('.prev-btn')
+
+if(prevBtn){
+  prevBtn.addEventListener('click', e => {
+    //e.preventDefault();
+    document.querySelector('.step-' + step).classList.remove('show')
+    step > 1 ? step-- : ''
+    document.querySelector('.step-' + step).classList.add('show')
+  })
+}
+
+
+
+
+

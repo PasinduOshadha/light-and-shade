@@ -1,5 +1,8 @@
 /* mobile styles */
 @media (max-width: 480px) {
+    .main-wrapper::before{
+        top: -8vh;
+    }
     .burger {
         display: flex !important;
     }
@@ -33,6 +36,10 @@
     /* homepage cover section mobile styles: start */
     .homepage-cover .cover-services-boxes {
         width: 100vw;
+    }
+
+    .homepage-cover video{
+        display: none;
     }
 
     .homepage-cover .cover-services-boxes a {
