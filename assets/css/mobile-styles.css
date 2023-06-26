@@ -1,8 +1,9 @@
 /* mobile styles */
 @media (max-width: 480px) {
-    .main-wrapper::before{
+    .main-wrapper::before {
         top: -8vh;
     }
+
     .burger {
         display: flex !important;
     }
@@ -16,13 +17,17 @@
     }
 
     .navbar .navbar-brand {
-        height: 60px;
+        height: 50px;
     }
 
     .navbar .navbar-header {
-        width: 100%;
+        width: 100vw;
         max-width: 100vw;
-        ;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: 0px;
     }
 
     .navbar .cta-btn-wrapper {
@@ -33,12 +38,55 @@
         display: none !important;
     }
 
+    .navbar-mobile-right-col {
+        display: flex !important;
+        flex-direction: row;
+        margin-left: auto;
+
+    }
+
+    .btn-navbar-mobile {
+        background-color: var(--primary-yellow);
+        border: none;
+        outline: none;
+        box-shadow: none;
+        display: flex;
+        flex-direction: row;
+        border-radius: 50px;
+        justify-content: space-between;
+        min-width: inherit;
+        width: 150px;
+        padding-left: 3px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .btn-navbar-mobile div {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    .btn-navbar-mobile div .title {
+        font-size: 9px;
+    }
+
+    .btn-navbar-mobile div .contact-no {
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+    .btn-navbar-mobile img {
+        width: 32px;
+    }
+
     /* homepage cover section mobile styles: start */
     .homepage-cover .cover-services-boxes {
         width: 100vw;
     }
 
-    .homepage-cover video{
+    .homepage-cover video {
         display: none;
     }
 
