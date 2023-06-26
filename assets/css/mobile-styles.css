@@ -1,11 +1,16 @@
 /* mobile styles */
 @media (max-width: 480px) {
+    .theme-primary-btn{
+        font-size: 16px;
+        min-height: 50px;
+    }
     .main-wrapper::before {
         top: -8vh;
     }
 
     .burger {
         display: flex !important;
+        margin-right: 5px;
     }
 
     .navbar {
@@ -42,7 +47,7 @@
         display: flex !important;
         flex-direction: row;
         margin-left: auto;
-
+        align-items: center;
     }
 
     .btn-navbar-mobile {
@@ -82,8 +87,16 @@
     }
 
     /* homepage cover section mobile styles: start */
+    .homepage-cover{
+        background-position: 75% 50%;
+    }
+    .homepage-cover .col-md-12{
+        padding-bottom: 0px;
+    }
     .homepage-cover .cover-services-boxes {
         width: 100vw;
+        margin-bottom: 0;
+        order: 4;
     }
 
     .homepage-cover video {
@@ -123,7 +136,7 @@
     .carousel-block .carousel-row .swiper-slide .item-body .item-content h5 {
         font-size: 14px;
         font-weight: 500;
-        margin-bottom: 5px;
+        margin-bottom: 0px;
     }
 
     .carousel-block .carousel-row .swiper-slide {
@@ -132,7 +145,7 @@
     }
 
     .carousel-block .carousel-row .swiper-slide .item-body .item-content small {
-        font-size: 14px;
+        font-size: 11px;
         line-height: 16px;
     }
 
@@ -149,6 +162,22 @@
     .carousel-block .carousel-row .swiper-pagination-bullet {
         height: 10px;
         width: 10px;
+    }
+
+    .carousel-block .carousel-row .swiper-slide .item-body .readmore-link{
+        margin-right: 5px;
+        width: 10%;
+    }
+
+    .carousel-block .carousel-row .swiper-slide .item-body .readmore-link a{
+        font-size: 16px;
+    }
+
+    .carousel-block .carousel-row .swiper-slide img{
+        margin-bottom: 5px;
+    }
+    .carousel-block .carousel-row .swiper-slide .item-body .item-content{
+        padding-left: 5px;
     }
 
     .blinds-section {
@@ -169,6 +198,12 @@
 
     .tabs-block .title-row>div h1 {
         margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tabs-block h1.underlined::after{
+        width: 100%;
     }
 
     .tabs-block .tab-pills-wrapper .panel-default .nav-tabs {
@@ -225,10 +260,17 @@
         display: inherit;
         min-height: inherit;
         height: auto;
+        padding-bottom: 30px;
+        padding-top: 30px;
     }
 
     .testimonial-block .testimonial-slider .testimonial-item {
         flex-direction: column !important;
+    }
+
+    .testimonial-block .testimonial-block-title{
+        font-size: 30px !important;
+        line-height: 45px;
     }
 
     .testimonial-block .testimonial-prev,
@@ -249,12 +291,31 @@
         width: 100% !important;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
-        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
     }
 
     .testimonial-block .testimonial-slider .testimonial-item .content-wrapper .user-icon {
         width: 100px;
         margin-top: -50px;
+    }
+
+    .testimonial-block .testimonial-slider .testimonial-item .content-wrapper .name{
+        font-size: 22px;
+    }
+
+    .testimonial-block .testimonial-slider .testimonial-item .content-wrapper .designation{
+        font-size: 20px;
+    }
+
+    .testimonial-block .testimonial-slider .testimonial-item .content-wrapper .rating{
+        height: 20px;
+    }
+
+    .testimonial-block .testimonial-slider .testimonial-item .content-wrapper .testimonial-content{
+        font-size: 16px;
+        margin-bottom: 10px;
     }
 
 
@@ -457,6 +518,23 @@
     /* Logo slider section:end */
 
     /* footer section: start */
+    .footer-section .footer-bg-wrapper{
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .footer-section .footer-bg-wrapper::after{
+        top: 0;
+        left: 0;
+        position: absolute;
+        content: '';
+        height: 45%;
+        width: 100%;
+        content: '';
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 65%);
+    }
+    
     .footer-section .google-review-widget img {
         width: 180px;
         transform: translateY(-0px);

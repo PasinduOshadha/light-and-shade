@@ -35,6 +35,7 @@ menuToggle.addEventListener('change', function () {
 $(document).ready(function () {
   var carousel_slider_settings = {
     autoplay: true,
+    responsiveClass:true,
     loop: true,
     autoplayTimeout: 4000,
     margin: 10,
@@ -44,9 +45,9 @@ $(document).ready(function () {
     responsive: {
       320: {
         items: 2,
-        autoWidth: true,
-        margin: 20,
-        center: true
+        // autoWidth: true,
+        margin: 10,
+        // center: true
       },
       769: {
         items: 3,
@@ -81,7 +82,8 @@ $(document).ready(function () {
     nav: true,
     responsive: {
       0: {
-        items: 1
+        items: 1,
+        nav: false
       }
     }
   }
@@ -94,7 +96,7 @@ $(document).ready(function () {
     autoplayTimeout: 4000,
     autoplaySpeed: 6000,
     dots: false,
-    margin: 10,
+    margin: 20,
     responsive: {
       0: {
         items: 2
@@ -150,6 +152,16 @@ AOS.init({
 });
 
 
+
+// pre loader
+// jQuery("body").prepend('<div id="preloader">Loading...</div>');
+// jQuery(document).ready(function() {
+//     jQuery(".page-loader").remove();
+// });
+
+$(window).on('load', function() {
+  $(".page-loader").fadeOut("fast");
+});
 
 
 
