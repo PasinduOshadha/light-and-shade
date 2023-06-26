@@ -144,6 +144,11 @@ if(prevBtn){
   })
 }
 
+// AOS 
+AOS.init({
+  once: true
+});
+
 
 
 
