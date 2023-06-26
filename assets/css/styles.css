@@ -659,6 +659,8 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 }
 .testimonial-block .testimonial-block-title{
     margin-bottom: 60px;
+    font-size: 55px;
+    line-height: 65px;
     color: #fff;
         position: relative;
     width: fit-content;
@@ -827,9 +829,12 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     background-repeat: no-repeat;
     padding-bottom: 80px;
     /* height: 70vh; */
-    min-height: 800px;
+    min-height: 1000px;
     /* background-position: 65vw 50%; */
     background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .faq-section .panel {
@@ -847,7 +852,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     max-width: 610px;
     position: relative;
     margin-bottom: 41px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .faq-section .faq-block-title::after{
@@ -953,6 +958,10 @@ content: '';
     /* display: flex; */
     /* flex-direction: column; */
     /* justify-content: center; */
+}
+
+.blog-block a{
+    text-decoration: none;
 }
 
 .blog-block .blog-wrapper {
@@ -1392,7 +1401,7 @@ color: #FFFFFF;
 .footer-section .google-review-widget {
     text-align: center;
     /* margin-top: -150px; */
-    transform: translateY(-70px);
+    transform: translateY(-60px);
     /* margin-bottom: 60px; */
 }
 
@@ -1408,6 +1417,11 @@ color: #FFFFFF;
     min-height: 400px;
     display: flex;
     /* align-items: center; */
+}
+
+.footer-section .footer-bg-wrapper{
+    padding-bottom: 80px;
+    padding-top: 40px;
 }
 
 .footer-section .footer-info-row .col-left {
@@ -1429,7 +1443,7 @@ color: #FFFFFF;
     position: absolute;
     left: 0;
     top: 0;
-    height: 550px;
+    height: 620px;
     width: 100%;
     content: '';
     /* z-index: 1; */
@@ -2584,4 +2598,24 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 24%, rgba(
 
 .show-menu {
     transform: none;
+}
+
+
+/* loader */
+.page-loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background: #000;
+    z-index: 9999;
+}
+
+.page-loader img{
+    position: relative;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    border-radius: 100px
 }
