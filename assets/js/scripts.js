@@ -42,13 +42,21 @@ $(document).ready(function () {
     dotsEach: true,
     navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
     responsive: {
-      0: {
-        items: 2
+      320: {
+        items: 2,
+        autoWidth: true,
+        margin: 20,
+        center: true
       },
       769: {
-        items: 3
+        items: 3,
+        margin: 30
       },
-      1024: {
+      // 1100: {
+      //   items: 4,
+      //   nav: true
+      // },
+      1300: {
         items: 4,
         nav: true
       }
