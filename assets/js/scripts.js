@@ -127,9 +127,9 @@ const nextBtn = document.querySelector('.next-btn')
 if(nextBtn){
   nextBtn.addEventListener('click', e => {
     document.querySelector('.step-' + step).classList.remove('show')
-    step < 4 ? step++ : '';
+    step < 5 ? step++ : '';
     document.querySelector('.step-' + step).classList.add('show')
-  
+    step == 5 ? ( document.querySelector('.form-wrapper').classList.add('hide') ) : ''
   })
 }
 
@@ -143,6 +143,18 @@ if(prevBtn){
     document.querySelector('.step-' + step).classList.remove('show')
     step > 1 ? step-- : ''
     document.querySelector('.step-' + step).classList.add('show')
+  })
+}
+
+// search results back btn
+const backBtn = document.querySelector('.back-btn')
+if(backBtn){
+  backBtn.addEventListener('click', () =>{
+    document.querySelector('.step-' + step).classList.remove('show')
+    step--
+    document.querySelector('.step-' + step).classList.add('show')
+    document.querySelector('.form-wrapper').classList.remove('hide')
+    //alert('hi')
   })
 }
 
