@@ -54,7 +54,7 @@ Generic styles goes here
     font-size: 20px;
     text-transform: uppercase;
     margin-right: 10px;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .navbar .navbar-nav>li>a:hover,
@@ -87,6 +87,7 @@ Generic styles goes here
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-right: 20px;
 }
 
 .navbar .cta-btn-wrapper .cta-btn-primary {
@@ -129,6 +130,7 @@ Generic styles goes here
     font-size: 11px;
     line-height: 16px;
     text-transform: uppercase;
+    font-weight: 500;
 }
 
 .navbar .cta-btn-wrapper .cta-btn-primary .contact-no,
@@ -141,7 +143,7 @@ Generic styles goes here
 
 .navbar .cta-btn-wrapper .cta-btn-secondary {
     background-color: var(--primary-yellow);
-    color: #000;
+    color: #fff;
     border-radius: 50px;
     min-width: 200px;
     outline: none;
@@ -170,8 +172,11 @@ Generic styles goes here
 
 .navbar .cta-btn-wrapper .search-icon,
 .navbar .cta-btn-wrapper .burger-icons{
-    width: 50px;
+    width: 60px;
+    cursor: pointer;
 }
+
+
 
 .navbar .cta-btn-wrapper .search-icon {
     margin-right: 15px;
@@ -276,13 +281,14 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 88%);
 }
 .homepage-cover .cover-services-boxes a{
     min-width: 194px;
-    min-height: 154px;
+    min-height: 145px;
     background: #000;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    padding: 25px 45px;
+    padding: 15px 35px;
+    padding-top: 20px;
     text-decoration: none;
     transition: all 0.25s ease-in-out;
 }
@@ -308,6 +314,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 88%);
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
+    width: 45%;
 }
 
 .homepage-cover .title-underline{
@@ -332,7 +339,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 
 .carousel-block .title-row {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     margin-bottom: 28px;
 }
 
@@ -348,11 +355,12 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 .carousel-block .col-md-6 .view-more-link {
     font-family: Spartan;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 31px;
     letter-spacing: -0.01em;
     text-align: left;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .carousel-block .col-md-6 .view-more-link:hover{
@@ -379,9 +387,9 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 }
 
 .carousel-block .carousel-row .swiper-slide .item-body .item-content small {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .carousel-block .carousel-row .swiper-slide .item-body .item-content>div {
@@ -416,7 +424,24 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 
 .carousel-block .carousel-row .swiper-slide img {
     max-width: 100%;
-    margin-bottom: 19px;
+}
+
+.carousel-block .carousel-row .swiper-slide:hover .item-thumb{
+    transform: scale(1.05);
+}
+
+.carousel-block .carousel-row .img-wrapper{
+    max-width: 100%;
+    margin: 0px;
+    overflow: hidden;
+    height: fit-content;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.item-thumb{
+    transition: all 0.25s ease-in-out;
+    border-radius: 15px;
 }
 
 .carousel-block .carousel-row .swiper-button-prev::after,
@@ -515,9 +540,11 @@ Note: Since the home page carousel blocks are same, one styles block is defined
 }
 
 .tabs-block .tab-pills-wrapper ul li a {
-    color: #4B4B4B !important;
+    color: #767676 !important;
     border: none !important;
     font-size: 21px;
+    line-height: 21px;
+    padding-top: 9px;
 }
 
 .tabs-block .tab-pills-wrapper ul li.active a {
@@ -673,7 +700,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     position: absolute;
     left: 50%;
     transform: translatex(-50%);
-    bottom: -21px;
+    bottom: -11px;
     height: 2px;
     background-color: #fff;
     width: 250px;
@@ -730,7 +757,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     display: flex;
     flex-direction: row;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 0;
     width: 100%;
     overflow-x: hidden;
@@ -818,6 +845,10 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     transition-timing-function: linear !important;
 }
 
+.testimonial-block .owl-nav{
+    top: 50%;
+}
+
 /* testimonial css : end */
 
 /* FAQ block css: start */
@@ -829,7 +860,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     background-repeat: no-repeat;
     padding-bottom: 80px;
     /* height: 70vh; */
-    min-height: 1000px;
+    min-height: 800px;
     /* background-position: 65vw 50%; */
     background-size: contain;
     display: flex;
@@ -852,7 +883,7 @@ Note: Since the home page carousel blocks are same, one styles block is defined
     max-width: 610px;
     position: relative;
     margin-bottom: 41px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .faq-section .faq-block-title::after{
@@ -880,7 +911,7 @@ content: '';
 }
 
 .faq-section .faq-block-wrapper .faq-block .panel-heading {
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a {
@@ -888,6 +919,8 @@ content: '';
     font-weight: 600;
     font-size: 24px;
     text-decoration: none;
+    display: block;
+    position: relative;
 }
 
 .faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a.collapsed {
@@ -906,31 +939,62 @@ content: '';
     /* padding-left: 15px; */
 }
 
-.faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a::after {
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    background-color: red;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10px;
-    content: "";
-    z-index: 1;
-    background: url('../img/cross-sign.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    transition: all 0.15s ease-in-out;
-}
+
 .faq-section .faq-block-wrapper{
     margin-right: 80px;
 }
 
-.faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title a.collapsed::after {
-    background: url('../img/plus-sign.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+.faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title .target-title.collapsed::before{
+    height: 15px;
+    width: 2px;
+    border-radius: 5px;
+    background-color: #fff;
+    content: '';
+    top: 50%;
+    right: 2%;
+    transition: all 0.25s ease-in-out;
+    position: absolute;
+    transform: translatey(-50%);
+}
+
+.faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title .target-title.collapsed::after{
+    height: 15px;
+    width: 2px;
+    border-radius: 5px;
+    background-color: #fff;
+    content: '';
+    top: 50%;
+    right: 2%;
+    transition: all 0.25s ease-in-out;
+    position: absolute;
+    transform: translatey(-50%) rotate(-90deg);
+    transition: all 0.25s ease-in-out;
+}
+
+.faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title .target-title::before{
+    height: 15px;
+    width: 2px;
+    border-radius: 5px;
+    background-color: var(--primary-yellow);
+    content: '';
+    top: 50%;
+    right: 2%;
+    position: absolute;
+    transition: all 0.25s ease-in-out;
+    transform: translatey(-50%) rotate(45deg);
+}
+
+.faq-section .faq-block-wrapper .faq-block .panel-heading .panel-title .target-title::after{
+    height: 15px;
+    width: 2px;
+    border-radius: 5px;
+    background-color: var(--primary-yellow);
+    content: '';
+    top: 50%;
+    right: 2%;
+    position: absolute;
+    transform: translatey(-50%) rotate(-45deg);
+    transition: all 0.25s ease-in-out;
 }
 
 .faq-section .faq-block-wrapper .faq-block .panel-body {
@@ -940,6 +1004,7 @@ content: '';
     font-weight: 300;
     line-height: 1.7em;
     padding: 20px;
+    padding-top: 0px;
 }
 .faq-section .faq-block-title{
     font-weight: 600;
@@ -2598,7 +2663,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 24%, rgba(
     flex-direction: row;
     justify-content: space-between;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 0;
     right: 0;
     transform: translatey(-50%);
@@ -2743,3 +2808,123 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 24%, rgba(
     transform: translate(-50%, -50%);
     border-radius: 100px
 }
+
+/* search panel */
+.search-panel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    z-index: 99999;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    display: none;
+}
+
+
+
+.search-panel input{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 500px;
+    height: 60px;
+    padding: 20px 30px;
+    background-color: #111;
+    border-radius: 50px;
+    border:2px solid #222 ;
+    color: #fff;
+    font-size: 24px;
+    transition: all 0.25s ease-in-out;
+    
+}
+
+.search-panel input:active,
+.search-panel input:focus,
+.search-panel input:focus-within{
+    outline: none;
+    box-shadow: none;
+    border-color: #333;
+}
+
+.search-panel .close-btn{
+    text-align: right;
+    font-size: 40px;
+    padding-right: 20px; 
+    padding-top: 10px;
+    position: relative;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+.search-panel .close-btn:hover{
+    opacity: 0.7;
+}
+
+
+.scale-in-center {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+
+  .scale-out-center {
+	-webkit-animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes scale-out-center {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-out-center {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+  }
+  

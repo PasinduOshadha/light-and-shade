@@ -43,7 +43,7 @@ h1.underlined{
     /* display: inline-block; */
     position: relative;
     max-width: fit-content;
-    padding-bottom: 21px;
+    padding-bottom: 11px;
 }
 
 h1.underlined::after{
