@@ -84,6 +84,9 @@ $(document).ready(function () {
       0: {
         items: 1,
         nav: false
+      },
+      1024: {
+        nav: true
       }
     }
   }
@@ -175,5 +178,26 @@ $(window).on('load', function() {
   $(".page-loader").fadeOut("fast");
 });
 
+
+// search panel
+const searchIcon = document.querySelector('.search-icon')
+const searchCloseBtn = document.querySelector('.search-panel .close-btn')
+const searchPanel = document.querySelector('.search-panel')
+const body = document.getElementsByTagName('body')[0]
+
+searchIcon.addEventListener('click', () => {
+  if(searchPanel.classList.contains('scale-out-center')){
+    searchPanel.classList.remove('scale-out-center')
+  }
+  searchPanel.classList.add('show')
+  searchPanel.classList.add('scale-in-center')
+  body.style.overflow = 'hidden'
+})
+
+searchCloseBtn.addEventListener('click', () => {
+  // searchPanel.classList.remove('show')
+  searchPanel.classList.add('scale-out-center')
+  body.style.overflow = ''
+})
 
 
